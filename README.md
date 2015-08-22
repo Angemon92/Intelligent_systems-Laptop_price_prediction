@@ -1,2 +1,3 @@
 # Inetelligent_systems-Laptop_price_prediction
 Will be added soon...
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/C ramGB.jpg)
