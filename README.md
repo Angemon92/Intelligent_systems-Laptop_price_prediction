@@ -13,7 +13,7 @@
 Everytime we want to sell something, following question appears `what is the good price for my selling item ?`
 There are two ways to give the answer:   
 1.Surf the internet, looking for prices of laptops with similar characteristics (attributes in the following text) as yourown.   
-2.Use machine learning to get optimal, **best price** (not too expensive neather cheap), based on near 40000 laptops collected from EBay API.
+2.Use machine learning to get optimal, **best price** (not too expensive neather cheap), based on near 40000 laptops collected from EBay's API.
    
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Problem explanation.jpg)   
 
