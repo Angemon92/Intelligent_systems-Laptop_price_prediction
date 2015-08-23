@@ -1,11 +1,11 @@
 # Inetelligent_systems-Laptop_price_prediction
    
 [About the project](#atp)   
-[collecting the data](#cd)
-[Filltering data and exploratory analysis](#fdea)
-[Applying machine learning techniques for regression problem and evaluation](#ml)
+[collecting the data](#cd)   
+[Filltering data and exploratory analysis](#fdea)   
+[Applying machine learning techniques for regression problem and evaluation](#ml)   
 [Acknowledgements](#ack)   
-[Licence](#lic)
+[Licence](#lic)   
    
 ##<a name="atp"></a>About the project
 Everytime we want to sell something, following question appear `what is the good price for my selling item ?`
