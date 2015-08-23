@@ -5,6 +5,8 @@ Pisctures are available in folder "Pictures"
 
 ### Attributes:   
 ######Descrete:
+* ~~"sellingCurrency"~~
+* ~~"shippingCurrency"~~
 * "returnShippingPaidBy"
 * "type"
 * "brand"
@@ -13,8 +15,6 @@ Pisctures are available in folder "Pictures"
 * "releaseYear"
 * "graphicProcessingType"
 * "condition"
-* ~~"sellingCurrency"~~
-* ~~"shippingCurrency"~~
    
 ######Continious:   
 * ~~"itemID"~~
