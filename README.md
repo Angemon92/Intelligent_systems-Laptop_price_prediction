@@ -17,7 +17,7 @@ There are two ways to give the answer:
 
 The aim of this project is, as it was expalined, to help the user to **name the price** of laptop that he wants to sell. Every laptop have several attributes from which depend its value. 
 In this project will be shown whole process from:
-* collecting the data
+* Collecting the data
 * Filltering data
 * Applying machine learning techniques for regression problem and evaluation
 
