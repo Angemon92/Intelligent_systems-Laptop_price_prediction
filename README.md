@@ -5,8 +5,8 @@ Pisctures are available in folder "Pictures"
 
 ### Attributes:   
 ######Descrete:
-*"returnShippingPaidBy"
-*"type"
+   *"returnShippingPaidBy"
+  *"type"
 *"brand"
 *"operatingSystem"
 *"processirType"
