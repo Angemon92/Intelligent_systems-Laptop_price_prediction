@@ -8,9 +8,28 @@ When selling laptop, use machine learning to find out best price for laptop with
 Pisctures are available in folder "Pictures"
 
 ### Attributes:   
-Descrete: "returnShippingPaidBy", "type", "brand", "operatingSystem", "processirType", "releaseYear", "graphicProcessingType", "condition", ~~"sellingCurrency"~~, ~~"shippingCurrency"~~      
-Continious: ~~"itemID"~~, "shippingPrice" , "screenSize", "hardDriveGB", "ramGB", "processorSpeedGHZ", **"sellingPrice"** 
-`hint: ~~Striketrought~~ - removed attribute, **bold** - Output attribute`
+######Descrete:
+* ~~"sellingCurrency"~~
+* ~~"shippingCurrency"~~
+* "returnShippingPaidBy"
+* "type"
+* "brand"
+* "operatingSystem"
+* "processirType"
+* "releaseYear"
+* "graphicProcessingType"
+* "condition"
+   
+######Continious:   
+* ~~"itemID"~~
+* "shippingPrice"
+* "screenSize"
+* "hardDriveGB"
+*"ramGB"
+*"processorSpeedGHZ"
+* **"sellingPrice"**
+   
+`hint: `~~Striketrought~~` - removed attribute, `**bold**` - Output attribute`
 
 
 ### Exploratory analysis
