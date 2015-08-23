@@ -1,6 +1,7 @@
 # Inetelligent_systems-Laptop_price_prediction
 
-<a href="https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/README.md#header">Link to Header</a>
+[link text](#aaa)
+
 
 ## Problem explanation
 When selling laptop, use machine learning to find out best price for laptop based on its characteristics (RAM,HDD,Processor,...).
@@ -20,7 +21,9 @@ When selling laptop, use machine learning to find out best price for laptop base
 * "releaseYear"
 * "graphicProcessingType"
 * "condition"
-   
+
+### <a name="aaa"></a>A Heading in this SO entry!
+
 ######Continious:   
 * ~~"itemID"~~
 * "shippingPrice"
@@ -46,4 +49,4 @@ When selling laptop, use machine learning to find out best price for laptop base
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)
 
   
-#header
+  
