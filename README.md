@@ -1,12 +1,27 @@
 # Inetelligent_systems-Laptop_price_prediction
    
-[Acknowledgements](#ack)
+[About the project](#atp)
+[Acknowledgements](#ack)   
 [Licence](#lic)
-## Problem explanation
-When selling laptop, use machine learning to find out best price for laptop based on its characteristics (RAM,HDD,Processor,...).
+   
+##<a name="atp"></a>About the project
+Everytime we want to sell something, following question appear `what is the good price for my selling item ?`
+There are two ways to give the answer:
+1. Surf trought the internet and looking for prices of laptops with similar characteristics (attributes in the following text) as yourown.
+2. Use machine learning to get optimal, **best price** (not too expensive neather cheap), based on near 40000 laptops collected from EBay API.
    
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Problem explanation.jpg)   
-`Model is trained using EBay API to create laptop dataset which serves as models input.`
+
+The aim of this project, as it was expalined a while ago, is to help the user to **name the price** of laptop that he wants to sell. Every laptop have several attributes from which depend laptop value. 
+In this project will be shown whole process from:
+* collecting the data
+* Filltering data
+* Imputing missing values
+* Applying machine learning techniques for this problem
+* Evaluating regression results
+
+   
+   
    
 ### Attributes:   
 ######Descrete:
