@@ -10,7 +10,7 @@
 [Licence](#lic)   
    
 ##<a name="atp"></a>About the project
-Everytime we want to sell something, following question appear `what is the good price for my selling item ?`
+Everytime we want to sell something, following question appears `what is the good price for my selling item ?`
 There are two ways to give the answer:   
 1.Surf the internet, looking for prices of laptops with similar characteristics (attributes in the following text) as yourown.   
 2.Use machine learning to get optimal, **best price** (not too expensive neather cheap), based on near 40000 laptops collected from EBay API.
