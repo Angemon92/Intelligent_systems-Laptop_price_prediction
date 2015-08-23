@@ -1,7 +1,7 @@
 # Inetelligent_systems-Laptop_price_prediction
    
 [About the project](#atp)   
-[collecting the data](#cd)   
+[Collecting the data](#cd)   
 [Filltering data and exploratory analysis](#fdea)   
 [Applying machine learning techniques for regression problem and evaluation](#ml)   
 [Acknowledgements](#ack)   
@@ -24,10 +24,13 @@ In this project will be shown whole process from:
 ###<a name="cd"></a>Collecting the data
 - Story about application logic
    
-###<a name="fdea"></a>Filltering data and exploratory analysis   
-- Story about constraints for removing noise and outliers from data   
-#### Attributes:   
-###### Descrete:
+###<a name="fdea"></a>Filltering data and exploratory analysis
+   
+Story about constraints for removing noise and outliers from data   
+
+####Attributes:   
+
+######Descrete:   
 * ~~"sellingCurrency"~~
 * ~~"shippingCurrency"~~
 * "returnShippingPaidBy"
