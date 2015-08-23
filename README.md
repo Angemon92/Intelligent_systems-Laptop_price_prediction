@@ -14,8 +14,9 @@ Pisctures are available in folder "Pictures"
 * "graphicProcessingType"
 * "condition"
 * ~~"sellingCurrency"~~
-* ~~"shippingCurrency"~~      
-######Continious:
+* ~~"shippingCurrency"~~
+   
+######Continious:   
 * ~~"itemID"~~
 * "shippingPrice"
 * "screenSize"
