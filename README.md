@@ -5,9 +5,7 @@ When selling laptop, use machine learning to find out best price for laptop base
    
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Problem explanation.jpg)   
 `Model is trained using EBay API to create laptop dataset which serves as models input.`
-
-Pisctures are available in folder "Pictures"
-
+   
 ### Attributes:   
 ######Descrete:
 * ~~"sellingCurrency"~~
