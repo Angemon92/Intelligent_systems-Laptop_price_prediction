@@ -4,9 +4,27 @@ Will be added soon...
 Pisctures are available in folder "Pictures"
 
 ### Attributes:   
-Descrete: "returnShippingPaidBy", "type", "brand", "operatingSystem", "processirType", "releaseYear", "graphicProcessingType", "condition", ~~"sellingCurrency"~~, ~~"shippingCurrency"~~      
-Continious: ~~"itemID"~~, "shippingPrice" , "screenSize", "hardDriveGB", "ramGB", "processorSpeedGHZ", **"sellingPrice"** 
-`hint: ~~Striketrought~~ - removed attribute, **bold** - Output attribute`
+######Descrete:
+*"returnShippingPaidBy"
+*"type"
+*"brand"
+*"operatingSystem"
+*"processirType"
+*"releaseYear"
+*"graphicProcessingType"
+*"condition"
+*~~"sellingCurrency"~~
+*~~"shippingCurrency"~~      
+######Continious:
+*~~"itemID"~~
+*"shippingPrice"
+*"screenSize"
+*"hardDriveGB"
+*"ramGB"
+*"processorSpeedGHZ"
+* **"sellingPrice"**
+   
+`hint: `~~Striketrought~~` - removed attribute, `**bold**` - Output attribute`
 
 
 ### Exploratory analysis
