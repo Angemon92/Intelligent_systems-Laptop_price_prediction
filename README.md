@@ -1,9 +1,9 @@
 # Inetelligent_systems-Laptop_price_prediction
    
 [About the project](#atp)   
-* [collecting the data](#cd)
-* [Filltering data](#fd)
-* [Applying machine learning techniques for regression problem and evaluation](#ml)
+[collecting the data](#cd)
+[Filltering data and exploratory analysis](#fdea)
+[Applying machine learning techniques for regression problem and evaluation](#ml)
 [Acknowledgements](#ack)   
 [Licence](#lic)
    
@@ -24,7 +24,7 @@ In this project will be shown whole process from:
 ###<a name="cd"></a>Collecting the data
 - Story about application logic
    
-###<a name="fd"></a>Filltering data
+###<a name="fdea"></a>Filltering data and exploratory analysis
 - Story about constraints for removing noise and outliers from data
 #### Attributes:   
 ######Descrete:
@@ -49,28 +49,24 @@ In this project will be shown whole process from:
 * **"sellingPrice"**
    
 `hint: `~~Striketrought~~` - removed attribute, `**bold**` - Output attribute`
+#### Exploratory analysis
+###### Selling price
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)
+   
+###### Condition, Processor type, Brand, Release year
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/2 collage.jpg)
+###### Graphic processing type, Operating system, Type of computer, Return shipping paid by
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/3 collage.jpg)
+   
+###### Hard drice, RAM, Processor speed, Screen size
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)
+   
 - Imputinh missing values
    
 ###<a name="ml"></a>Applying machine learning techniques for regression problem and evaluation
 - Story about Linear regression and CART
 - Evaluation metrics: RMSE,MAE,Rsquared
    
-
-
-
-### Exploratory analysis
-#### Selling price
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)
-   
-#### Condition, Processor type, Brand, Release year
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/2 collage.jpg)
-#### Graphic processing type, Operating system, Type of computer, Return shipping paid by
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/3 collage.jpg)
-   
-#### Hard drice, RAM, Processor speed, Screen size
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)
-
-  
 ##<a name="ack"></a>Acknowledgements
 The project was developed as part of the project assignment for the course <a href="http://is.fon.rs">Intelligent Systems</a> at the <a href="http://fon.rs">Faculty of Organization Sciences</a>, University of Belgrade, Serbia.
 ##<a name="lic"></a>Licence
