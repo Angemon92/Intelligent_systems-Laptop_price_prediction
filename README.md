@@ -1,5 +1,7 @@
 # Inetelligent_systems-Laptop_price_prediction
    
+#Report is NOT finished yet...
+   
 [About the project](#atp)   
 [Collecting the data](#cd)   
 [Filltering data and exploratory analysis](#fdea)   
