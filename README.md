@@ -1,7 +1,6 @@
 # Inetelligent_systems-Laptop_price_prediction
-
-[link text](#aaa)
-
+   
+[link text](#ack)Acknowledgements
 
 ## Problem explanation
 When selling laptop, use machine learning to find out best price for laptop based on its characteristics (RAM,HDD,Processor,...).
@@ -21,8 +20,6 @@ When selling laptop, use machine learning to find out best price for laptop base
 * "releaseYear"
 * "graphicProcessingType"
 * "condition"
-
-### <a name="aaa"></a>A Heading in this SO entry!
 
 ######Continious:   
 * ~~"itemID"~~
@@ -49,4 +46,5 @@ When selling laptop, use machine learning to find out best price for laptop base
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)
 
   
-  
+##<a name="ack"></a>Acknowledgements
+The project was developed as part of the project assignment for the course <a href="http://is.fon.rs">Intelligent Systems</a> at the <a href="http://fon.rs">Faculty of Organization Sciences</a>, University of Belgrade, Serbia.
