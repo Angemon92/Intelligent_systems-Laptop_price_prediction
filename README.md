@@ -24,10 +24,10 @@ In this project will be shown whole process from:
 ###<a name="cd"></a>Collecting the data
 - Story about application logic
    
-###<a name="fdea"></a>Filltering data and exploratory analysis
-- Story about constraints for removing noise and outliers from data
+###<a name="fdea"></a>Filltering data and exploratory analysis   
+- Story about constraints for removing noise and outliers from data   
 #### Attributes:   
-######Descrete:
+###### Descrete:
 * ~~"sellingCurrency"~~
 * ~~"shippingCurrency"~~
 * "returnShippingPaidBy"
