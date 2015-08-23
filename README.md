@@ -1,6 +1,6 @@
 # Inetelligent_systems-Laptop_price_prediction
    
-[link text](#ack)Acknowledgements
+[Acknowledgements](#ack)
 
 ## Problem explanation
 When selling laptop, use machine learning to find out best price for laptop based on its characteristics (RAM,HDD,Processor,...).
