@@ -5,21 +5,21 @@ Pisctures are available in folder "Pictures"
 
 ### Attributes:   
 ######Descrete:
-   *"returnShippingPaidBy"
-  *"type"
-*"brand"
-*"operatingSystem"
-*"processirType"
-*"releaseYear"
-*"graphicProcessingType"
-*"condition"
-*~~"sellingCurrency"~~
-*~~"shippingCurrency"~~      
+* "returnShippingPaidBy"
+* "type"
+* "brand"
+* "operatingSystem"
+* "processirType"
+* "releaseYear"
+* "graphicProcessingType"
+* "condition"
+* ~~"sellingCurrency"~~
+* ~~"shippingCurrency"~~      
 ######Continious:
-*~~"itemID"~~
-*"shippingPrice"
-*"screenSize"
-*"hardDriveGB"
+* ~~"itemID"~~
+* "shippingPrice"
+* "screenSize"
+* "hardDriveGB"
 *"ramGB"
 *"processorSpeedGHZ"
 * **"sellingPrice"**
