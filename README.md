@@ -1,6 +1,9 @@
 # Inetelligent_systems-Laptop_price_prediction
    
 [About the project](#atp)   
+* [collecting the data](#cd)
+* [Filltering data](#fd)
+* [Applying machine learning techniques for regression problem and evaluation](#ml)
 [Acknowledgements](#ack)   
 [Licence](#lic)
    
@@ -16,14 +19,14 @@ The aim of this project is, as it was expalined, to help the user to **name the 
 In this project will be shown whole process from:
 * collecting the data
 * Filltering data
-* Imputing missing values
-* Applying machine learning techniques for this problem
-* Evaluating regression results
+* Applying machine learning techniques for regression problem and evaluation
 
+###<a name="cd"></a>Collecting the data
+- Story about application logic
    
-   
-   
-### Attributes:   
+###<a name="fd"></a>Filltering data
+- Story about constraints for removing noise and outliers from data
+#### Attributes:   
 ######Descrete:
 * ~~"sellingCurrency"~~
 * ~~"shippingCurrency"~~
@@ -46,6 +49,13 @@ In this project will be shown whole process from:
 * **"sellingPrice"**
    
 `hint: `~~Striketrought~~` - removed attribute, `**bold**` - Output attribute`
+- Imputinh missing values
+   
+###<a name="ml"></a>Applying machine learning techniques for regression problem and evaluation
+- Story about Linear regression and CART
+- Evaluation metrics: RMSE,MAE,Rsquared
+   
+
 
 
 ### Exploratory analysis
