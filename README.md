@@ -73,7 +73,7 @@ Story about constraints for removing noise and outliers from data
 - Evaluation metrics: RMSE,MAE,Rsquared
    
 ##<a name="ack"></a>Acknowledgements
-The project was developed as part of the project assignment for the course <a href="http://is.fon.rs">Intelligent Systems</a> at the <a href="http://fon.rs">Faculty of Organization Sciences</a>, University of Belgrade, Serbia.
+The project was developed as part of the project assignment for the course <a href="http://is.fon.rs">Intelligent Systems</a> at the <a href="http://fon.rs">Faculty of Organizational Sciences</a>, University of Belgrade, Serbia.
 ##<a name="lic"></a>Licence
 
 This software is licensed under the MIT License
