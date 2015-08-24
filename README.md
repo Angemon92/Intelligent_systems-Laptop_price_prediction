@@ -41,7 +41,7 @@ Final collection of attributes contains: [Attribute list](#al)
 ###<a name="fdea"></a>Filtering data and exploratory analysis
    
 ####<a name="al"></a>Attributes:     
-######Discrete:   
+######Categorical:   
 * ~~"sellingCurrency"~~
 * ~~"shippingCurrency"~~
 * "returnShippingPaidBy"
@@ -75,11 +75,18 @@ Final collection of attributes contains: [Attribute list](#al)
 ###### Hard drive, RAM, Processor speed, Screen size
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)
    
-- Imputing missing values
+##### Imputing missing values
+* For categorical attributes, random sample from existing values from attribute is used to impute missing data.
+* For continuous attributes, median statistic is used to impute missing data.
    
-###<a name="ml"></a>Applying machine learning techniques for regression problem and evaluation
-- Story about Linear regression with L1/L2 = 0.1,0.03,0.05
-- Evaluation metrics: RMSE,MAE,Rsquared
+###<a name="ml"></a>Applying machine learning techniques for regression problem and evaluation   
+Python open source program "Orange Data Mining" is used to perform process of building and learning machine learning  models. Models that are learned and evalueted are:   
+* Linear regression with L1 reguralization (lambda=0.3)
+* Linear regression with L2 reguralization (lambda=0.3)
+* CART - Classification And Regression Tree   
+Evaluation metrics are: Root Mean Square Error, Mean Apsolute Error, R squared.
+Whole flow, models and values of evaluation metrics can bee seen in a picture below.   
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Orange workflow.png)
    
 ##<a name="ack"></a>Acknowledgements
 The project was developed as part of the project assignment for the course <a href="http://is.fon.rs">Intelligent Systems</a> at the <a href="http://fon.rs">Faculty of Organizational Sciences</a>, University of Belgrade, Serbia.
