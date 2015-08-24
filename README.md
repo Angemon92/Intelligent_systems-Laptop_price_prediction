@@ -10,15 +10,15 @@
 [Licence](#lic)   
    
 ##<a name="atp"></a>About the project
-Everytime we want to sell something, following question appear `what is the good price for my selling item ?`
+Everytime we want to sell something, following question appears: `What is the good price for my selling item ?`
 There are two ways to give the answer:   
 1.Surf the internet, looking for prices of laptops with similar characteristics (attributes in the following text) as yourown.   
-2.Use machine learning to get optimal, **best price** (not too expensive neather cheap), based on near 40000 laptops collected from EBay API.
+2.Use machine learning to get optimal, **best price** (not too expensive neather cheap), based on near 40000 laptops collected from EBay's API.
    
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Problem explanation.jpg)   
 
-The aim of this project is, as it was expalined, to help the user to **name the price** of laptop that he wants to sell. Every laptop have several attributes from which depend its value. 
-In this project will be shown whole process from:
+The aim of this project is to help the user to **name the price** of laptop that he wants to sell. Every laptop have several attributes from which depend its value. 
+In this project whole process will be shown:
 * Collecting the data
 * Filtering data
 * Applying machine learning techniques for regression problem and evaluation
@@ -75,7 +75,7 @@ Story about constraints for removing noise and outliers from data
 - Evaluation metrics: RMSE,MAE,Rsquared
    
 ##<a name="ack"></a>Acknowledgements
-The project was developed as part of the project assignment for the course <a href="http://is.fon.rs">Intelligent Systems</a> at the <a href="http://fon.rs">Faculty of Organization Sciences</a>, University of Belgrade, Serbia.
+The project was developed as part of the project assignment for the course <a href="http://is.fon.rs">Intelligent Systems</a> at the <a href="http://fon.rs">Faculty of Organizational Sciences</a>, University of Belgrade, Serbia.
 ##<a name="lic"></a>Licence
 
 This software is licensed under the MIT License
