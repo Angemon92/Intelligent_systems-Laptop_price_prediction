@@ -25,7 +25,7 @@ In this project whole process will be shown:
 
 ###<a name="cd"></a>Collecting the data
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)
-`Concept Class Diagram of application. Only important attributes and methods are prezent. Laptop class is domain class and it is used by most of the classes in project.`
+`Conceptual Class Diagram of application. Only important attributes and methods are prezent. Laptop class is domain class and it is used by most of the classes in project.`
 - Story about application logic
    
 ###<a name="fdea"></a>Filtering data and exploratory analysis
