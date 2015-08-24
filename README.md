@@ -40,8 +40,6 @@ Final collection of attributes contains: [Attribute list](#al)
 
 ###<a name="fdea"></a>Filtering data and exploratory analysis
    
-Story about constraints for removing noise and outliers from data   
-   
 ####<a name="al"></a>Attributes:     
 ######Discrete:   
 * ~~"sellingCurrency"~~
