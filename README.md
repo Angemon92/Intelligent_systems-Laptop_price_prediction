@@ -86,8 +86,10 @@ Python open source program "Orange Data Mining" is used to perform process of bu
 * CART - Classification And Regression Tree
    
 Evaluation metrics are: Root Mean Square Error, Mean Apsolute Error, R squared.
+   
 Whole flow, models and values of evaluation metrics can bee seen in a picture below.   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Orange workflow.png)
+'Evaluation is perform using Cross validation with 5 folds'
    
 ##<a name="ack"></a>Acknowledgements
 The project was developed as part of the project assignment for the course <a href="http://is.fon.rs">Intelligent Systems</a> at the <a href="http://fon.rs">Faculty of Organizational Sciences</a>, University of Belgrade, Serbia.
