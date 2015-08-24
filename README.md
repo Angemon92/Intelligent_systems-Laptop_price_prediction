@@ -24,13 +24,14 @@ In this project whole process will be shown:
 * Applying machine learning techniques for regression problem and evaluation
 
 ###<a name="cd"></a>Collecting the data   
-Application written in JAVA is developed for this project. App is containing two "pieces".   
-First piece's role is to collect data from EBay. Main graphical form [CollectingDataForm] creates new thread [CollectingDataThread] that every 12h calls EBay's API two times. First time it collects 10000 laptop's IDs, and second time calls API to extract all available data (attributes) for each laptop based on laptop's ID.   
-Second piece [main] is programmed to do core cleaning of collected data (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [cleaning rules can be found in Laptop call, inside setter methods]   
+Application is containing two "pieces".   
+1. First piece's role is to collect data from EBay. Main graphical form [CollectingDataForm] creates new thread [CollectingDataThread] that every 12h calls EBay's API two times. First time it collects 10000 laptop's IDs, and second time calls API to extract all available data (attributes) for each laptop based on laptop's ID.   
+2. Second piece [main] is programmed to do core cleaning of collected data (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [cleaning rules can be found in Laptop call, inside setter methods]   
 Conceptual Class diagram of application can be seen in picture below.
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)
 `Only important attributes and methods are prezent. Laptop class is domain class and it is used by most of the classes in project.`
-   
+Application is written in JAVA, using NetBeans IDE. Application is using DOM4J library for manipulation with XML.   
+
 ###<a name="fdea"></a>Filtering data and exploratory analysis
    
 Story about constraints for removing noise and outliers from data   
