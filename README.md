@@ -24,7 +24,7 @@ In this project whole process will be shown:
 * Applying machine learning techniques for regression problem and evaluation
 
 ###<a name="cd"></a>Collecting the data   
-Application is containing two "pieces".   
+Application is developed for collecting data and contains two "pieces":   
 1. First piece's role is to collect data from EBay. Main graphical form [*CollectingDataForm*] creates new thread [*CollectingDataThread*] that every 12h calls EBay's API two times. First time it collects 10000 laptop's IDs, and second time calls API to extract all available data (attributes) for each laptop based on laptop's ID.   
 2. Second piece [*Main*] is programmed to do core cleaning of collected data (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [cleaning rules can be found in Laptop call, inside setter methods]   
 Conceptual Class diagram of application can be seen in picture below.
