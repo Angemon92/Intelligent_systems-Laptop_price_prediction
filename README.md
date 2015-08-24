@@ -35,7 +35,7 @@ Conceptual Class diagram of application can be seen in picture below.
    
 ##### Selected  and excluded attributes
 Following attributes are exluded from collecting process bacose small number ot laptops has them (every 100'th laptop has these attrributes): Wirless, Warranty, Graphic card configuration, Weight, Item must be returned within, Refund will be given as, Processor configuration.     
-Attribute "Model" is also excluded becse it has high variance. (example: Model e {40A10090US, Latitude E6420, ZV5000, E6400, D620, D630, Mini 10, ...}   
+Attribute "Model" is also excluded becose it has high variance. (example: Model e {40A10090US, Latitude E6420, ZV5000, E6400, D620, D630, Mini 10, ...}   
 Final collection of attributes contains: [Attribute list](#al)
 
 ###<a name="fdea"></a>Filtering data and exploratory analysis
@@ -80,7 +80,7 @@ Story about constraints for removing noise and outliers from data
 - Imputing missing values
    
 ###<a name="ml"></a>Applying machine learning techniques for regression problem and evaluation
-- Story about Linear regression and CART
+- Story about Linear regression with L1/L2 = 0.1,0.03,0.05
 - Evaluation metrics: RMSE,MAE,Rsquared
    
 ##<a name="ack"></a>Acknowledgements
