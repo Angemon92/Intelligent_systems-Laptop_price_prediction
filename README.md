@@ -32,13 +32,17 @@ Conceptual Class diagram of application can be seen in picture below.
 `Only important attributes and methods of classes are shown. Laptop class is domain class and it is used by most of the classes in project.`   
 *Application is written in JAVA, using NetBeans IDE.*   
 *Application is using DOM4J library for manipulation with XML.*
+   
+##### Selected  and excluded attributes
+Following attributes are exluded from collecting process bacose small number ot laptops has them (every 100'th laptop has these attrributes): Wirless, Warranty, Graphic card configuration, Weight, Item must be returned within, Refund will be given as, Processor configuration.     
+Attribute "Model" is also excluded becse it has high variance. (example: Model e {40A10090US, Latitude E6420, ZV5000, E6400, D620, D630, Mini 10, ...}   
+Final collection of attributes contains: [Attribute list](#al)
 
 ###<a name="fdea"></a>Filtering data and exploratory analysis
    
 Story about constraints for removing noise and outliers from data   
 
-####Attributes:   
-
+<a name="al"></a>####Attributes:   
 ######Discrete:   
 * ~~"sellingCurrency"~~
 * ~~"shippingCurrency"~~
