@@ -31,6 +31,10 @@ data[data$condition=="Brand New","condition"] = "New"
 data[data$condition=="Like New","condition"] = "New"
 data[data$condition=="New other (see details)","condition"] = "New"
 
+# create data set with missing values
+write.csv(data,"../Database/dataSetLaptopsPreprocessedWithMissing.csv", quote=FALSE, row.names=FALSE)
+
+
 # Vizualization
 
 
@@ -127,11 +131,17 @@ text(cex=1, x=p-.25, y=-1.25, labs, xpd=T, srt=45)
 rm(p,labs,naValues)
 
 # Imputing values - Method RANDOM
-for(j in c("returnShippingPaidBy","type","brand","operatingSystem","processorType","releaseYear","condition","graphicsProcessingType" )){
+for(j in c("returnShippingPaidBy","type","brand","operatingSystem","processorType","releaseYear","graphicsProcessingType" )){
   for(i in 1:nrow(data)){
     if(is.na(data[i,j])) data[i,j] = sample(levels(data[,j]),1)
   }
 }
+
+for(i in 1:nrow(data)){
+  if(is.na(data[i,"condition"])) data[i,"condition"] = sample(c("For parts or not working","Manufacturer refurbished","New","Seller refurbished","Used"),1)
+}
+
+
 for(j in c("shippingPrice","screenSize","hardDriveGB","ramGB","processorSpeedGHZ")){
   median = median((data[,j]),na.rm=TRUE)
   for(i in 1:nrow(data)){
@@ -140,3 +150,6 @@ for(j in c("shippingPrice","screenSize","hardDriveGB","ramGB","processorSpeedGHZ
 }
 rm(i,j,median)
 
+write.csv(data,"../Database/dataSetLaptopsPreprocessed.csv", quote=FALSE, row.names=FALSE)
+
+d = read.csv("../Database/dataSetLaptopsPreprocessed.csv")
