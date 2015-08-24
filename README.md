@@ -23,10 +23,13 @@ In this project whole process will be shown:
 * Filtering data
 * Applying machine learning techniques for regression problem and evaluation
 
-###<a name="cd"></a>Collecting the data
+###<a name="cd"></a>Collecting the data   
+Application written in JAVA is developed for this project. App is containing two "pieces".   
+First piece's role is to collect data from EBay. Main graphical form [CollectingDataForm] creates new thread [CollectingDataThread] that every 12h calls EBay's API two times. First time it collects 10000 laptop's IDs, and second time calls API to extract all available data (attributes) for each laptop based on laptop's ID.   
+Second piece [main] is programmed to do core cleaning of collected data (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [cleaning rules can be found in Laptop call, inside setter methods]   
+Conceptual Class diagram of application can be seen in picture below.
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)
-`Conceptual Class Diagram of application. Only important attributes and methods are prezent. Laptop class is domain class and it is used by most of the classes in project.`
-- Story about application logic
+`Only important attributes and methods are prezent. Laptop class is domain class and it is used by most of the classes in project.`
    
 ###<a name="fdea"></a>Filtering data and exploratory analysis
    
