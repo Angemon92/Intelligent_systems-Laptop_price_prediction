@@ -80,10 +80,11 @@ Final collection of attributes contains: [Attribute list](#al)
 * For continuous attributes, median statistic is used to impute missing data.
    
 ###<a name="ml"></a>Applying machine learning techniques for regression problem and evaluation   
-Python open source program "Orange Data Mining" is used to perform process of building and learning machine learning  models. Models that are learned and evalueted are:   
+Python open source program "Orange Data Mining" is used to perform process of building and learning machine learning  models (Orange/EBay Orange workflow.ows contains flow that can be inported in Orangle program to perform predictions). Models that are learned and evalueted are:   
 * Linear regression with L1 reguralization (lambda=0.3)
 * Linear regression with L2 reguralization (lambda=0.3)
-* CART - Classification And Regression Tree   
+* CART - Classification And Regression Tree
+   
 Evaluation metrics are: Root Mean Square Error, Mean Apsolute Error, R squared.
 Whole flow, models and values of evaluation metrics can bee seen in a picture below.   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Orange workflow.png)
