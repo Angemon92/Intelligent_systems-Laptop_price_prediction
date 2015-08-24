@@ -60,8 +60,8 @@ Story about constraints for removing noise and outliers from data
 * "shippingPrice"
 * "screenSize"
 * "hardDriveGB"
-*"ramGB"
-*"processorSpeedGHZ"
+* "ramGB"
+* "processorSpeedGHZ"
 * **"sellingPrice"**
    
 `hint: `~~Striketrought~~` - removed attribute, `**bold**` - Output attribute`
