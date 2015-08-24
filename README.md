@@ -23,18 +23,25 @@ In this project whole process will be shown:
 * Filtering data
 * Applying machine learning techniques for regression problem and evaluation
 
-###<a name="cd"></a>Collecting the data
+###<a name="cd"></a>Collecting the data   
+Application is developed for collecting data and contains two "pieces":   
+1. First piece's role is to collect data from EBay. Main graphical form [*CollectingDataForm*] creates new thread [*CollectingDataThread*] that every 12h calls EBay's API two times. First time it collects 10000 laptop's IDs, and second time calls API to extract all available data (attributes) for each laptop based on laptop's ID.   
+2. Second piece [*Main*] is programmed to do core cleaning of collected data (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [cleaning rules can be found in Laptop class, inside setter methods]   
+Conceptual Class diagram of application can be seen in picture below.
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)
-`Concept Class Diagram of application. Only important attributes and methods are prezent. Laptop class is domain class and it is used by most of the classes in project.`
-- Story about application logic
+`Only important attributes and methods of classes are shown. Laptop class is domain class and it is used by most of the classes in project.`   
+*Application is written in JAVA, using NetBeans IDE.*   
+*Application is using DOM4J library for manipulation with XML.*
    
+##### Selected  and excluded attributes
+Following attributes are exluded from collecting process bacose small number ot laptops has them (every 100'th laptop has these attrributes): Wirless, Warranty, Graphic card configuration, Weight, Item must be returned within, Refund will be given as, Processor configuration.     
+Attribute "Model" is also excluded becose it has high variance. (example: Model e {40A10090US, Latitude E6420, ZV5000, E6400, D620, D630, Mini 10, ...}   
+Final collection of attributes contains: [Attribute list](#al)
+
 ###<a name="fdea"></a>Filtering data and exploratory analysis
    
-Story about constraints for removing noise and outliers from data   
-
-####Attributes:   
-
-######Discrete:   
+####<a name="al"></a>Attributes:     
+######Categorical:   
 * ~~"sellingCurrency"~~
 * ~~"shippingCurrency"~~
 * "returnShippingPaidBy"
@@ -51,8 +58,8 @@ Story about constraints for removing noise and outliers from data
 * "shippingPrice"
 * "screenSize"
 * "hardDriveGB"
-*"ramGB"
-*"processorSpeedGHZ"
+* "ramGB"
+* "processorSpeedGHZ"
 * **"sellingPrice"**
    
 `hint: `~~Striketrought~~` - removed attribute, `**bold**` - Output attribute`
@@ -68,11 +75,19 @@ Story about constraints for removing noise and outliers from data
 ###### Hard drive, RAM, Processor speed, Screen size
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)
    
-- Imputing missing values
+##### Imputing missing values
+* For categorical attributes, random sample from existing values from attribute is used to impute missing data.
+* For continuous attributes, median statistic is used to impute missing data.
    
-###<a name="ml"></a>Applying machine learning techniques for regression problem and evaluation
-- Story about Linear regression and CART
-- Evaluation metrics: RMSE,MAE,Rsquared
+###<a name="ml"></a>Applying machine learning techniques for regression problem and evaluation   
+Python open source program "Orange Data Mining" is used to perform process of building and learning machine learning  models (Orange/EBay Orange workflow.ows contains flow that can be inported in Orangle program to perform predictions). Models that are learned and evalueted are:   
+* Linear regression with L1 reguralization (lambda=0.3)
+* Linear regression with L2 reguralization (lambda=0.3)
+* CART - Classification And Regression Tree
+   
+Evaluation metrics are: Root Mean Square Error, Mean Apsolute Error, R squared.
+Whole flow, models and values of evaluation metrics can bee seen in a picture below.   
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Orange workflow.png)
    
 ##<a name="ack"></a>Acknowledgements
 The project was developed as part of the project assignment for the course <a href="http://is.fon.rs">Intelligent Systems</a> at the <a href="http://fon.rs">Faculty of Organizational Sciences</a>, University of Belgrade, Serbia.
