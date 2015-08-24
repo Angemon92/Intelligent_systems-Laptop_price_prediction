@@ -6,20 +6,20 @@
 package logic;
 
 import domen.Laptop;
-import gui_collecter.mainFrameForm;
+import gui_collecter.DataCollectingForm;
 import java.util.List;
 
 /**
  *
  * @author Stefan
  */
-public class LaptopWorkerThread implements Runnable{
+public class CVollectingDataThread implements Runnable{
     
     int name = 0;
     boolean consolMonitorProcess;
     boolean onlyOnePageForTest = false;
     
-    public LaptopWorkerThread(boolean consolMonitorProcess){
+    public CVollectingDataThread(boolean consolMonitorProcess){
         this.consolMonitorProcess = consolMonitorProcess;
     }
     
@@ -27,7 +27,7 @@ public class LaptopWorkerThread implements Runnable{
     
     public void run() {
         try {
-            mainFrameForm.instance.setTxtToForm("Started worker" + name + ": " + DateManager.getInstance().getSimpleDateAndTime());
+            DataCollectingForm.instance.setTxtToForm("Started worker" + name + ": " + DateManager.getInstance().getSimpleDateAndTime());
 
             List<Laptop> ll;
 
@@ -39,10 +39,10 @@ public class LaptopWorkerThread implements Runnable{
             
             updateMainList(ll);
             
-            mainFrameForm.instance.setTxtToForm("Finished worker" + name + ": " + DateManager.getInstance().getSimpleDateAndTime());
+            DataCollectingForm.instance.setTxtToForm("Finished worker" + name + ": " + DateManager.getInstance().getSimpleDateAndTime());
             name++;
         } catch (Exception e) {
-            mainFrameForm.instance.setTxtToForm("Worker"+name+" has got exception...");
+            DataCollectingForm.instance.setTxtToForm("Worker"+name+" has got exception...");
         }
     }
     
@@ -58,7 +58,7 @@ public class LaptopWorkerThread implements Runnable{
                 br++;
             }
         }    
-        mainFrameForm.instance.setTxtToForm("Total added to main list:" + br);
+        DataCollectingForm.instance.setTxtToForm("Total added to main list:" + br);
         IOManager.getInstance().serializeList(mainList,"Database/mainList.ser");
     	}catch(Exception e){
     		System.out.println("!updateMainList!");

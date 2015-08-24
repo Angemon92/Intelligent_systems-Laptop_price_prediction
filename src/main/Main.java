@@ -15,8 +15,8 @@ import logic.IOManager;
  *
  * @author Stefan
  */
-public class MainEBay {
-    
+public class Main {
+
     public static void main(String[] args) {
        
         List<Laptop> ll = new LinkedList<Laptop>();

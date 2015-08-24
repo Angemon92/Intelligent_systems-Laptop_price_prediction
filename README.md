@@ -4,7 +4,7 @@
    
 [About the project](#atp)   
 [Collecting the data](#cd)   
-[Filltering data and exploratory analysis](#fdea)   
+[Filtering data and exploratory analysis](#fdea)   
 [Applying machine learning techniques for regression problem and evaluation](#ml)   
 [Acknowledgements](#ack)   
 [Licence](#lic)   
@@ -20,19 +20,21 @@ There are two ways to give the answer:
 The aim of this project is, as it was expalined, to help the user to **name the price** of laptop that he wants to sell. Every laptop have several attributes from which depend its value. 
 In this project will be shown whole process from:
 * Collecting the data
-* Filltering data
+* Filtering data
 * Applying machine learning techniques for regression problem and evaluation
 
 ###<a name="cd"></a>Collecting the data
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)
+`Concept Class Diagram of application. Only important attributes and methods are prezent. Laptop class is domain class and it is used by most of the classes in project.`
 - Story about application logic
    
-###<a name="fdea"></a>Filltering data and exploratory analysis
+###<a name="fdea"></a>Filtering data and exploratory analysis
    
 Story about constraints for removing noise and outliers from data   
 
 ####Attributes:   
 
-######Descrete:   
+######Discrete:   
 * ~~"sellingCurrency"~~
 * ~~"shippingCurrency"~~
 * "returnShippingPaidBy"
@@ -44,7 +46,7 @@ Story about constraints for removing noise and outliers from data
 * "graphicProcessingType"
 * "condition"
 
-######Continious:   
+######Continuous:   
 * ~~"itemID"~~
 * "shippingPrice"
 * "screenSize"
@@ -63,10 +65,10 @@ Story about constraints for removing noise and outliers from data
 ###### Graphic processing type, Operating system, Type of computer, Return shipping paid by
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/3 collage.jpg)
    
-###### Hard drice, RAM, Processor speed, Screen size
+###### Hard drive, RAM, Processor speed, Screen size
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)
    
-- Imputinh missing values
+- Imputing missing values
    
 ###<a name="ml"></a>Applying machine learning techniques for regression problem and evaluation
 - Story about Linear regression and CART

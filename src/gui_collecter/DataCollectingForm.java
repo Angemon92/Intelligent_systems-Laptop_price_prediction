@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,21 +9,21 @@ package gui_collecter;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import logic.LaptopWorkerThread;
+import logic.CVollectingDataThread;
 import java.awt.Dimension;
 
 /**
  *
  * @author Stefan
  */
-public class mainFrameForm extends javax.swing.JFrame {
+public class DataCollectingForm extends javax.swing.JFrame {
     
-    public static mainFrameForm instance;
+    public static DataCollectingForm instance;
     ScheduledExecutorService executor;
     /**
      * Creates new form mainFrameForm
      */
-    public mainFrameForm() {
+    public DataCollectingForm() {
         initComponents();
         instance = this;
     }
@@ -100,13 +101,13 @@ public class mainFrameForm extends javax.swing.JFrame {
 //                }
 //            }
 //        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(mainFrameForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(DataCollectingForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(mainFrameForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(DataCollectingForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(mainFrameForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(DataCollectingForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(mainFrameForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(DataCollectingForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        }
 //        //</editor-fold>
 //
@@ -114,7 +115,7 @@ public class mainFrameForm extends javax.swing.JFrame {
 //        java.awt.EventQueue.invokeLater(new Runnable() {
 //            public void run() {
 //            
-//                new mainFrameForm().setVisible(true); 
+//                new DataCollectingForm().setVisible(true); 
 //                
 //            }
 //        });
@@ -128,7 +129,7 @@ public class mainFrameForm extends javax.swing.JFrame {
 
     private void start() {
         executor = Executors.newSingleThreadScheduledExecutor();
-        executor.scheduleAtFixedRate(new LaptopWorkerThread(true), 0, 12, TimeUnit.HOURS);
+        executor.scheduleAtFixedRate(new CVollectingDataThread(true), 0, 12, TimeUnit.HOURS);
     }
 
     private void end() {
