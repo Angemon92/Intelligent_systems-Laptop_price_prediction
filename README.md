@@ -42,7 +42,7 @@ Final collection of attributes contains: [Attribute list](#al)
    
 Story about constraints for removing noise and outliers from data   
    
-<a name="al"></a>####Attributes:     
+####<a name="al"></a>Attributes:     
 ######Discrete:   
 * ~~"sellingCurrency"~~
 * ~~"shippingCurrency"~~
