@@ -17,7 +17,7 @@ There are two ways to give the answer:
    
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Problem explanation.jpg)   
 
-The aim of this project is to help the user to **name the price** of laptop that he wants to sell. Every laptop have several attributes from which depend its value. 
+The aim of this project is to help the user to **name the price** of laptop that he wants to sell. Every laptop has several attributes from which its value depends. 
 In this project whole process will be shown:
 * Collecting the data
 * Filtering data
