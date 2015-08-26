@@ -54,10 +54,9 @@ Final collection of attributes contains: [Attribute list](#al)
 ######Continuous:   
 * `~~"itemID"~~`: Unique value for each laptop. *Used only in collecting and filtering manipulataion. Attribut is removed after all attributes are filtered.*
 * `"shippingPrice"`: Shipping price in USD.   
-|   |   |   |   |   |   |
-|---|---|---|---|---|---|
-| Min. | 1st Qu.  | Median | Mean | 3rd Qu. | Max. |
-|  0 | 0  | 0  | 5.782  | 12.000  | 300.000 |
+| Min. | 1st Qu.  | Median | Mean | 3rd Qu. | Max. |   
+|---|---|---|---|---|---|   
+|  0 | 0  | 0  | 5.782  | 12.000  | 300.000 |   
    
    
 Min.    1st Qu.  Median   Mean    3rd Qu.    Max. 
