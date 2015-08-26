@@ -1,5 +1,5 @@
 # Inetelligent_systems-Laptop_price_prediction
-Report content:
+Report content:   
 [About the project](#atp)   
 [Collecting the data](#cd)   
 [Filtering data and exploratory analysis](#fdea)   
