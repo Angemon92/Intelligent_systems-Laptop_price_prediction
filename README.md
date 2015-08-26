@@ -40,8 +40,8 @@ Final collection of attributes contains: [Attribute list](#al)
 # This chaper is NOT finished yet...   
 ####<a name="al"></a>Attributes explanation and constraints:     
 ######Categorical:   
-* `~~"sellingCurrency"~~`: Selling price currency of laptop {"AUD", "CAD", "EUR", "GBP", "USD"}. *All laptops are filtered to USD currency.* 
-* `~~"shippingCurrency"~~`: Shipping price currency of laptop {"AUD", "CAD", "EUR", "GBP", "USD"}. *All laptops are filtered to USD currency.*
+* `"sellingCurrency"`: Selling price currency of laptop {"AUD", "CAD", "EUR", "GBP", "USD"}. *All laptops are filtered to USD currency and then attribute is excluded from dataset.* 
+* `"shippingCurrency"`: Shipping price currency of laptop {"AUD", "CAD", "EUR", "GBP", "USD"}. *All laptops are filtered to USD currency and then attribute is excluded from dataset.*
 * `"returnShippingPaidBy"`: In case of return, shipping will be paid by {"Buyer", "Seller"}.
 * `"type"`: Type of laptop {"Laptop", "Netbook", "Notebook", "Portable", "Ultrabook"}.
 * `"brand"`: Brand of laptop {"Acer", "Asus", "Compaq", "Dell", "Emachines", "Fujitsu", "Gateway", "HP", "IBM", "Lenovo", "Panasonic", "Samsung", "Sony", "Toshiba"}.
@@ -52,15 +52,14 @@ Final collection of attributes contains: [Attribute list](#al)
 * `"condition"`: Condition of laptop {"Brand New", "New", "New other (see details)", "Like New", "For parts or not working", "Manufacturer refurbished", "Seller refurbished", "Used"}.*Reduction is used on {"Brand New", "New", "New other (see details)", "Like New"}. All 4 are united in one "New" value.*  
 
 ######Continuous:   
-* `~~"itemID"~~`
-* `"shippingPrice"`
-* `"screenSize"`
-* `"hardDriveGB"`
-* `"ramGB"`
-* `"processorSpeedGHZ"`
-* ` **"sellingPrice"** `
+* `~~"itemID"~~`: Unique value for each laptop.* Used only in collecting and filtering manipulataion. Attribut is removed after all attributes are filtered.*
+* `"shippingPrice"`: Shipping price. 
+* `"screenSize"`: Screen size in inches.
+* `"hardDriveGB"`: Hard drive disk in BG.
+* `"ramGB"`: RAM in GB.
+* `"processorSpeedGHZ"`: CPU speed in GHZ.
+* `"sellingPrice"`: **Selling price of laptop.**
    
-`hint: `~~Strikethrough~~` - removed attribute, `**bold**` - Output attribute`
 #### Exploratory analysis
 ###### Selling price
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)
