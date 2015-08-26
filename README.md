@@ -1,7 +1,5 @@
 # Inetelligent_systems-Laptop_price_prediction
    
-#Report is NOT finished yet...
-   
 [About the project](#atp)   
 [Collecting the data](#cd)   
 [Filtering data and exploratory analysis](#fdea)   
@@ -18,15 +16,15 @@ There are two ways to give the answer:
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Problem explanation.jpg)   
 
 The aim of this project is to help the user to **name the price** of laptop that he wants to sell. Every laptop has several attributes from which its value depends. 
-In this project whole process will be shown:
+In this project the whole process will be shown:
 * Collecting the data
 * Filtering data
 * Applying machine learning techniques for regression problem and evaluation
 
 ###<a name="cd"></a>Collecting the data   
 Application is developed for collecting data and contains two "pieces":   
-1. First piece's role is to collect data from EBay. Main graphical form [*CollectingDataForm*] creates new thread [*CollectingDataThread*] that every 12h calls EBay's API two times. First time it collects 10000 laptop's IDs, and second time calls API to extract all available data (attributes) for each laptop based on laptop's ID.   
-2. Second piece [*Main*] is programmed to do core cleaning of collected data (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [cleaning rules can be found in Laptop class, inside setter methods]   
+1. The first piece's role is to collect data from EBay. Main graphical form [*CollectingDataForm*] creates new thread [*CollectingDataThread*] that every 12h calls EBay's API two times. First time it collects 10000 laptop IDs, and second time calls API to extract all available data (attributes) for each laptop based on laptops ID.   
+2. The second piece [*Main*] is programmed to do core cleaning of collected data. Core cleaning is based on regular expressions. (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [cleaning rules can be found in Laptop class, inside setter methods]   
 Conceptual Class diagram of application can be seen in picture below.
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)
 `Only important attributes and methods of classes are shown. Laptop class is domain class and it is used by most of the classes in project.`   
@@ -34,8 +32,8 @@ Conceptual Class diagram of application can be seen in picture below.
 *Application is using DOM4J library for manipulation with XML.*
    
 ##### Selected  and excluded attributes
-Following attributes are exluded from collecting process bacose small number ot laptops has them (every 100'th laptop has these attrributes): Wirless, Warranty, Graphic card configuration, Weight, Item must be returned within, Refund will be given as, Processor configuration.     
-Attribute "Model" is also excluded becose it has high variance. (example: Model e {40A10090US, Latitude E6420, ZV5000, E6400, D620, D630, Mini 10, ...}   
+Following attributes are exluded from collecting process because small number of laptops has them (every 100th laptop has these attrributes): Wireless, Warranty, Graphic card configuration, Weight, Item must be returned within, Refund will be given as, Processor configuration.     
+Attribute "Model" is also excluded because it has high variance. (example: Model e {40A10090US, Latitude E6420, ZV5000, E6400, D620, D630, Mini 10, ...}   
 Final collection of attributes contains: [Attribute list](#al)
 
 ###<a name="fdea"></a>Filtering data and exploratory analysis
@@ -48,7 +46,7 @@ Final collection of attributes contains: [Attribute list](#al)
 * "type"
 * "brand"
 * "operatingSystem"
-* "processirType"
+* "processorType"
 * "releaseYear"
 * "graphicProcessingType"
 * "condition"
@@ -62,7 +60,7 @@ Final collection of attributes contains: [Attribute list](#al)
 * "processorSpeedGHZ"
 * **"sellingPrice"**
    
-`hint: `~~Striketrought~~` - removed attribute, `**bold**` - Output attribute`
+`hint: `~~Strikethrough~~` - removed attribute, `**bold**` - Output attribute`
 #### Exploratory analysis
 ###### Selling price
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)
@@ -76,20 +74,20 @@ Final collection of attributes contains: [Attribute list](#al)
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)
    
 ##### Imputing missing values
-* For categorical attributes, random sample from existing values from attribute is used to impute missing data.
+* For categorical attributes, random sample from existing values of attribute is used to impute missing data.
 * For continuous attributes, median statistic is used to impute missing data.
    
 ###<a name="ml"></a>Applying machine learning techniques for regression problem and evaluation   
-Python open source program "Orange Data Mining" is used to perform process of building and learning machine learning  models (Orange/EBay Orange workflow.ows contains flow that can be inported in Orangle program to perform predictions). Models that are learned and evalueted are:   
-* Linear regression with L1 reguralization (lambda=0.3)
-* Linear regression with L2 reguralization (lambda=0.3)
+Python open source program "Orange Data Mining" is used to perform process of building and learning machine learning  models (Orange/EBay Orange workflow.ows contains flow that can be imported in Orange program to perform predictions). Models that are learned and evalueted are:   
+* Linear regression with L1 regularization (lambda=0.3)
+* Linear regression with L2 regularization (lambda=0.3)
 * CART - Classification And Regression Tree
    
-Evaluation metrics are: Root Mean Square Error, Mean Apsolute Error, R squared.
+Evaluation metrics are: Root Mean Square Error and Mean Apsolute Error.
    
-Whole flow, models and values of evaluation metrics can bee seen in a picture below.   
+Whole flow, models and values of evaluation metrics can be seen in a picture below.   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Orange workflow.png)
-*Evaluation is perform using Cross validation with 5 folds*
+*Evaluation is performed using Cross validation with 5 folds*
    
 ##<a name="ack"></a>Acknowledgements
 The project was developed as part of the project assignment for the course <a href="http://is.fon.rs">Intelligent Systems</a> at the <a href="http://fon.rs">Faculty of Organizational Sciences</a>, University of Belgrade, Serbia.
