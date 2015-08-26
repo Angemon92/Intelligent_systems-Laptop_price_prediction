@@ -83,8 +83,7 @@ Final collection of attributes contains: [Attribute list](#al)
 |   Min.    | 1st Qu.  |  Median  |   Mean   | 3rd Qu.  |   Max.   |
 | --------- |:--------:|:--------:|:--------:|:--------:|:--------:|
 | 20.050    | 79.990   | 169.200  | 259.100  | 340.000  | 2000.000 |   
-Laptops that doesent satisfy constraints are removed from dataset. Near 4000 laptops are removed.   
-   
+Laptops which attributes does not satisfy any of constraints are removed from dataset. Near 4000 laptops are removed.   
 #### Exploratory analysis
 # This chaper is NOT finished yet...    
 ###### Selling price   
