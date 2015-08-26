@@ -57,7 +57,7 @@ Final collection of attributes contains: [Attribute list](#al)
    
 |   Min.    | 1st Qu.  |  Median  |   Mean   | 3rd Qu.  |   Max.   |
 | --------- |:--------:|:--------:|:--------:|:--------:|:--------:|
-| col 3 is  | right-   | $1600    | 111      | 1111     | 111      |
+| 0.0       | 0.0      | 0.000    | 5.782    | 12.0     | 300.0    |
    
 Min.    1st Qu.  Median   Mean    3rd Qu.    Max. 
 0.000   0.000    0.000    5.782   12.000     300.000   
