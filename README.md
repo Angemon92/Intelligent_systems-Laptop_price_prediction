@@ -74,8 +74,8 @@ Final collection of attributes contains: [Attribute list](#al)
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)
    
 ##### Imputing missing values
-* For categorical attributes, random sample from existing values of attribute is used to impute missing data.
-* For continuous attributes, median statistic is used to impute missing data.
+* Categorical attributes: Random sample from existing values of attribute is used to impute missing data.
+* Continuous attributes: Median statistic is used to impute missing data.
    
 ###<a name="ml"></a>Applying machine learning techniques for regression problem and evaluation   
 Python open source program "Orange Data Mining" is used to perform process of building and learning machine learning  models (Orange/EBay Orange workflow.ows contains flow that can be imported in Orange program to perform predictions). Models that are learned and evalueted are:   
