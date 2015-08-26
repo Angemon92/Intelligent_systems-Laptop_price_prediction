@@ -40,8 +40,8 @@ Final collection of attributes contains: [Attribute list](#al)
 # This chaper is NOT finished yet...   
 ####<a name="al"></a>Attributes explanation and constraints:     
 ######Categorical:   
-* ~~"sellingCurrency"~~: Selling price currency of laptop {"AUD", "CAD", "EUR", "GBP", "USD"}. *All laptops are filtered to USD currency.* 
-* ~~"shippingCurrency"~~: Shipping price currency of laptop {"AUD", "CAD", "EUR", "GBP", "USD"}. *All laptops are filtered to USD currency.*
+* `~~"sellingCurrency"~~`: Selling price currency of laptop {"AUD", "CAD", "EUR", "GBP", "USD"}. *All laptops are filtered to USD currency.* 
+* `~~"shippingCurrency"~~`: Shipping price currency of laptop {"AUD", "CAD", "EUR", "GBP", "USD"}. *All laptops are filtered to USD currency.*
 * `"returnShippingPaidBy"`: In case of return, shipping will be paid by {"Buyer", "Seller"}.
 * `"type"`: Type of laptop {"Laptop", "Netbook", "Notebook", "Portable", "Ultrabook"}.
 * `"brand"`: Brand of laptop {"Acer", "Asus", "Compaq", "Dell", "Emachines", "Fujitsu", "Gateway", "HP", "IBM", "Lenovo", "Panasonic", "Samsung", "Sony", "Toshiba"}.
@@ -58,7 +58,7 @@ Final collection of attributes contains: [Attribute list](#al)
 * `"hardDriveGB"`
 * `"ramGB"`
 * `"processorSpeedGHZ"`
-* `**"sellingPrice"**`
+* ` **"sellingPrice"** `
    
 `hint: `~~Strikethrough~~` - removed attribute, `**bold**` - Output attribute`
 #### Exploratory analysis
