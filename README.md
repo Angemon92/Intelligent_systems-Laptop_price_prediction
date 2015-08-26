@@ -58,10 +58,11 @@ Final collection of attributes contains: [Attribute list](#al)
 |   Min.    | 1st Qu.  |  Median  |   Mean   | 3rd Qu.  |   Max.   |
 | --------- |:--------:|:--------:|:--------:|:--------:|:--------:|
 | 0.000     | 0.000    | 0.000    | 5.782    | 12.000   | 300.000  |   
-* `"screenSize"`: Screen size in inches in USD. *Constrain: screenSize <= 20*  
+* `"screenSize"`: Screen size in inches in USD. *Constrain: screenSize <= 20*
+   
 |   Min.    | 1st Qu.  |  Median  |   Mean   | 3rd Qu.  |   Max.   |
 | --------- |:--------:|:--------:|:--------:|:--------:|:--------:|
-| 4.500     | 14.000   | 14.100   | 14.260   | 15.600   | 20.000   |
+| 4.500     | 14.000   | 14.100   | 14.260   | 15.600   | 20.000   |   
 * `"hardDriveGB"`: Hard drive disk in BG. *Constrain: hardDriveGB <= 4000*   
 Min.    1st Qu.  Median   Mean    3rd Qu.    Max.    
 0.0     250.0    320.0    355.2   320.0      4000.0   
