@@ -63,19 +63,26 @@ Final collection of attributes contains: [Attribute list](#al)
 |   Min.    | 1st Qu.  |  Median  |   Mean   | 3rd Qu.  |   Max.   |
 | --------- |:--------:|:--------:|:--------:|:--------:|:--------:|
 | 4.500     | 14.000   | 14.100   | 14.260   | 15.600   | 20.000   |   
-* `"hardDriveGB"`: Hard drive disk in BG. *Constrain: hardDriveGB <= 4000*   
-Min.    1st Qu.  Median   Mean    3rd Qu.    Max.    
-0.0     250.0    320.0    355.2   320.0      4000.0   
-* `"ramGB"`: RAM in GB. *Constrain: ramGB <= 32*   
-Min.    1st Qu.  Median   Mean    3rd Qu.    Max.   
-0.000   4.000    4.000    4.453   4.000      32.000   
-* `"processorSpeedGHZ"`: CPU speed in GHZ. *Constrain: processorSpeedGHZ <= 4*   
-Min.    1st Qu.  Median   Mean    3rd Qu.    Max.   
-0.000   1.900    2.130    2.111   2.400      4.000   
-* `"sellingPrice"`: **Selling price of laptop.** *Constrain: 20 <= selligPrice <= 2000*   
-Min.    1st Qu.  Median   Mean    3rd Qu.    Max.   
-20.05   79.99    169.20   259.10  340.00     2000.00   
+* `"hardDriveGB"`: Hard drive disk in BG. *Constrain: hardDriveGB <= 4000*
    
+|   Min.    | 1st Qu.  |  Median  |   Mean   | 3rd Qu.  |   Max.   |
+| --------- |:--------:|:--------:|:--------:|:--------:|:--------:|
+| 0.000     | 250.000  | 320.000  | 355.200  | 320.000  | 4000.000 |   
+* `"ramGB"`: RAM in GB. *Constrain: ramGB <= 32*
+   
+|   Min.    | 1st Qu.  |  Median  |   Mean   | 3rd Qu.  |   Max.   |
+| --------- |:--------:|:--------:|:--------:|:--------:|:--------:|
+| 0.000     | 4.000    | 4.000    | 4.453    | 4.000    | 32.000   |   
+* `"processorSpeedGHZ"`: CPU speed in GHZ. *Constrain: processorSpeedGHZ <= 4*
+   
+|   Min.    | 1st Qu.  |  Median  |   Mean   | 3rd Qu.  |   Max.   |
+| --------- |:--------:|:--------:|:--------:|:--------:|:--------:|
+| 0.000     | 1.900    | 2.130    | 2.110    | 2.400    | 4.000    |   
+* `"sellingPrice"`: **Selling price of laptop.** *Constrain: 20 <= selligPrice <= 2000*   
+   
+|   Min.    | 1st Qu.  |  Median  |   Mean   | 3rd Qu.  |   Max.   |
+| --------- |:--------:|:--------:|:--------:|:--------:|:--------:|
+| 20.050    | 79.990   | 169.200  | 259.100  | 340.000  | 2000.000 |   
 Laptops that doesent satisfy constraints are removed from dataset. Near 4000 laptops are removed.   
    
 #### Exploratory analysis
