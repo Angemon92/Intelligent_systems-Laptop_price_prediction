@@ -37,7 +37,7 @@ Attribute "Model" is also excluded because it has high variance. (example: Model
 Final collection of attributes contains: [Attribute list](#al)
 
 ###<a name="fdea"></a>Filtering data and exploratory analysis
-   
+# This chaper is NOT finished yet...   
 ####<a name="al"></a>Attributes:     
 ######Categorical:   
 * ~~"sellingCurrency"~~
