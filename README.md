@@ -42,23 +42,23 @@ Final collection of attributes contains: [Attribute list](#al)
 ######Categorical:   
 * ~~"sellingCurrency"~~: Selling price currency of laptop {"AUD", "CAD", "EUR", "GBP", "USD"}. *All laptops are filtered to USD currency.* 
 * ~~"shippingCurrency"~~: Shipping price currency of laptop {"AUD", "CAD", "EUR", "GBP", "USD"}. *All laptops are filtered to USD currency.*
-* "returnShippingPaidBy": In case of return, shipping will be paid by {"Buyer", "Seller"}.
-* "type": Type of laptop {"Laptop", "Netbook", "Notebook", "Portable", "Ultrabook"}.
-* "brand" Brand of laptop {"Acer", "Asus", "Compaq", "Dell", "Emachines", "Fujitsu", "Gateway", "HP", "IBM", "Lenovo", "Panasonic", "Samsung", "Sony", "Toshiba"}.
-* "operatingSystem": Operating system of laptop {"Chrome OS", "Not included", "Windows 2000", "Windows 7", "Windows 8", "Windows Vista", "Windows XP"}.
-* "processorType": Type of CPU {"AMD", "ATOM", "INTEL"}.*INTEL could be separeted in {i3, i5, i7} but then less the 0.1% of laptops have some of these 3 values.*
-* "releaseYear": Release year of laptop {2000, ... , 2015}.*There was several laptops with value of 2016 in this attribute, but they are excluded from dataset.*
-* "graphicProcessingType": Type of GPU {"Dedicated", "Hybrid", "Integrated"}.
-* "condition": Condition of laptop {"Brand New", "New", "New other (see details)", "Like New", "For parts or not working", "Manufacturer refurbished", "Seller refurbished", "Used"}.*Reduction is used on {"Brand New", "New", "New other (see details)", "Like New"}. All 4 are united in one "New" value.*  
+* `"returnShippingPaidBy"`: In case of return, shipping will be paid by {"Buyer", "Seller"}.
+* `"type"`: Type of laptop {"Laptop", "Netbook", "Notebook", "Portable", "Ultrabook"}.
+* `"brand"`: Brand of laptop {"Acer", "Asus", "Compaq", "Dell", "Emachines", "Fujitsu", "Gateway", "HP", "IBM", "Lenovo", "Panasonic", "Samsung", "Sony", "Toshiba"}.
+* `"operatingSystem"`: Operating system of laptop {"Chrome OS", "Not included", "Windows 2000", "Windows 7", "Windows 8", "Windows Vista", "Windows XP"}.
+* `"processorType"`: Type of CPU {"AMD", "ATOM", "INTEL"}.*INTEL could be separeted in {i3, i5, i7} but then less the 0.1% of laptops have some of these 3 values.*
+* `"releaseYear"`: Release year of laptop {2000, ... , 2015}.*There was several laptops with value of 2016 in this attribute, but they are excluded from dataset.*
+* `"graphicProcessingType"`: Type of GPU {"Dedicated", "Hybrid", "Integrated"}.
+* `"condition"`: Condition of laptop {"Brand New", "New", "New other (see details)", "Like New", "For parts or not working", "Manufacturer refurbished", "Seller refurbished", "Used"}.*Reduction is used on {"Brand New", "New", "New other (see details)", "Like New"}. All 4 are united in one "New" value.*  
 
 ######Continuous:   
-* ~~"itemID"~~
-* "shippingPrice"
-* "screenSize"
-* "hardDriveGB"
-* "ramGB"
-* "processorSpeedGHZ"
-* **"sellingPrice"**
+* `~~"itemID"~~`
+* `"shippingPrice"`
+* `"screenSize"`
+* `"hardDriveGB"`
+* `"ramGB"`
+* `"processorSpeedGHZ"`
+* `**"sellingPrice"**`
    
 `hint: `~~Strikethrough~~` - removed attribute, `**bold**` - Output attribute`
 #### Exploratory analysis
