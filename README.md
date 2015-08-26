@@ -37,7 +37,7 @@ Attribute "Model" is also excluded because it has high variance. (example: Model
 Final collection of attributes contains: [Attribute list](#al)
 
 ###<a name="fdea"></a>Filtering data and exploratory analysis
-# This chaper is NOT finished yet...   
+    
 ####<a name="al"></a>Attributes explanation and constraints:     
 ######Categorical:   
 * `"sellingCurrency"`: Selling price currency of laptop {"AUD", "CAD", "EUR", "GBP", "USD"}. *All laptops are filtered to USD currency and then attribute is excluded from dataset.* 
@@ -52,16 +52,31 @@ Final collection of attributes contains: [Attribute list](#al)
 * `"condition"`: Condition of laptop {"Brand New", "New", "New other (see details)", "Like New", "For parts or not working", "Manufacturer refurbished", "Seller refurbished", "Used"}.*Reduction is used on {"Brand New", "New", "New other (see details)", "Like New"}. All 4 are united in one "New" value.*  
 
 ######Continuous:   
-* `~~"itemID"~~`: Unique value for each laptop.* Used only in collecting and filtering manipulataion. Attribut is removed after all attributes are filtered.*
-* `"shippingPrice"`: Shipping price. 
-* `"screenSize"`: Screen size in inches.
-* `"hardDriveGB"`: Hard drive disk in BG.
-* `"ramGB"`: RAM in GB.
-* `"processorSpeedGHZ"`: CPU speed in GHZ.
-* `"sellingPrice"`: **Selling price of laptop.**
+* `~~"itemID"~~`: Unique value for each laptop. *Used only in collecting and filtering manipulataion. Attribut is removed after all attributes are filtered.*
+* `"shippingPrice"`: Shipping price in USD.
+Min.    1st Qu.  Median   Mean    3rd Qu.    Max.   
+0.000   0.000    0.000    5.782   12.000     300.000   
+* `"screenSize"`: Screen size in inches in USD. *Constrain: screenSize <= 20*   
+Min.    1st Qu.  Median   Mean    3rd Qu.    Max.   
+4.50    14.00    14.10    14.26   15.60      20.00   
+* `"hardDriveGB"`: Hard drive disk in BG. *Constrain: hardDriveGB <= 4000*   
+Min.    1st Qu.  Median   Mean    3rd Qu.    Max.    
+0.0     250.0    320.0    355.2   320.0      4000.0   
+* `"ramGB"`: RAM in GB. *Constrain: ramGB <= 32*   
+Min.    1st Qu.  Median   Mean    3rd Qu.    Max.   
+0.000   4.000    4.000    4.453   4.000      32.000   
+* `"processorSpeedGHZ"`: CPU speed in GHZ. *Constrain: processorSpeedGHZ <= 4*   
+Min.    1st Qu.  Median   Mean    3rd Qu.    Max.   
+0.000   1.900    2.130    2.111   2.400      4.000   
+* `"sellingPrice"`: **Selling price of laptop.** *Constrain: 20 <= selligPrice <= 2000*   
+Min.    1st Qu.  Median   Mean    3rd Qu.    Max.   
+20.05   79.99    169.20   259.10  340.00     2000.00   
+   
+Laptops that doesent satisfy constraints are removed from dataset. Near 4000 laptops are removed.   
    
 #### Exploratory analysis
-###### Selling price
+# This chaper is NOT finished yet...    
+###### Selling price   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)
    
 ###### Condition, Processor type, Brand, Release year
