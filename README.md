@@ -1,5 +1,5 @@
 # Inetelligent_systems-Laptop_price_prediction
-   
+Report content:
 [About the project](#atp)   
 [Collecting the data](#cd)   
 [Filtering data and exploratory analysis](#fdea)   
@@ -84,8 +84,8 @@ Final collection of attributes contains: [Attribute list](#al)
 | --------- |:--------:|:--------:|:--------:|:--------:|:--------:|
 | 20.050    | 79.990   | 169.200  | 259.100  | 340.000  | 2000.000 |   
 Laptops which attributes does not satisfy any of constraints are removed from dataset. Near 4000 laptops are removed.   
-#### Exploratory analysis
-# This chaper is NOT finished yet...    
+#### Exploratory analysis   
+There will be shown plots that give more information about attributes. First plot is frequency distribution of output attribute, selling price, presented with histogram plot. Next 8 plots represent  distributions of categorical attributes and last 4 plots represent relationship between selling price, y axis, and continous attribute, x axis.   
 ###### Selling price   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)
    
@@ -94,7 +94,8 @@ Laptops which attributes does not satisfy any of constraints are removed from da
 ###### Graphic processing type, Operating system, Type of computer, Return shipping paid by
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/3 collage.jpg)
    
-###### Hard drive, RAM, Processor speed, Screen size
+###### Hard drive, RAM, Processor speed, Screen size   
+Linear relationship between selling price and each continous attribute is represented as blue straight line.   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)
    
 ##### Imputing missing values
