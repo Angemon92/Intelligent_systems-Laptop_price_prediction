@@ -24,7 +24,7 @@ In this project the whole process of determining the optimal price for a product
 ###<a name="cd"></a>Collecting the data   
 The application developed for collecting data from eBay consist of two components:   
 1. The role of the first component is to collect data from EBay. Main graphical form [*CollectingDataForm*] creates new thread [*CollectingDataThread*] that every 12h calls EBay's API [*URLCreator*] two times. First time it collects 10000 laptop IDs, and second time calls API to extract all available data (attributes) for each laptop based on laptops ID. API is returning data in XML format [*XMLHandler*] and all collected data are stored [*IOManager*] in Database folder in serialized format. Name of the files where data is serialized is generated using date of creation [*DateManager*].
-2. The second component [*Main*] is programmed to do core cleaning of collected data. First it deserilize[*IOManager*] localy stored data. Core cleaning is based on regular expressions. (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [Cleaning rules can be found in Laptop class, inside setter methods]   
+2. The second component [*Main*] is programmed to do core cleaning of collected data. First it deserilize [*IOManager*] localy stored data. Core cleaning is based on regular expressions. (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [Cleaning rules can be found in Laptop class, inside setter methods]   
 Class diagram of application can be seen in picture below.
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)   Picture2: Class diagram of application.     
 Only important attributes and methods of classes are shown. Laptop class is domain class and it is used by most of the classes in project.  
@@ -82,15 +82,15 @@ All constraints for continous attributes are defined subjectivly by human in pro
 <a name="ea"></a>##Exploratory analysis   
 The plots presented in this section give more information about attributes. [First plot](#firstp) is frequency distribution of output attribute, selling price, presented with histogram plot. Following [four](#ffp) + [four](#sfp) plots represent  frequency distributions of categorical attributes and last [four](#fourp) plots represent relationship between selling price, y axis, and continous attribute, x axis.   
 
-<a name="firstp"></a>######Selling price   
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)
-   
-<a name="ffp"></a>###### Condition, Processor type, Brand, Release year
+######<a name="firstp"></a> Selling price   
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)   
+
+######<a name="ffp"></a> Condition, Processor type, Brand, Release year
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/2 collage.jpg)
-<a name="sfp"></a>###### Graphic processing type, Operating system, Type of computer, Return shipping paid by
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/3 collage.jpg)
-   
-<a name="fourp"></a>###### Hard drive, RAM, Processor speed, Screen size   
+######<a name="sfp"></a> Graphic processing type, Operating system, Type of computer, Return shipping paid by
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/3 collage.jpg)   
+
+######<a name="fourp"></a> Hard drive, RAM, Processor speed, Screen size   
 Linear relationship between selling price and each continous attribute is represented as blue straight line.   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)
    
