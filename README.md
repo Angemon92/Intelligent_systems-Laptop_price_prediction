@@ -80,21 +80,26 @@ The attributes selected for building a prediction model are given below.
 | 20.050    | 79.990   | 169.200  | 259.100  | 340.000  | 2000.000 |   
 All constraints for continous attributes are defined subjectivly by human in process of exploring the data. Laptops with attributes that do not satisfy any of constraints are removed from dataset. Near 4000 laptops are removed.   
 <a name="ea"></a>##Exploratory analysis   
-The plots presented in this section give more information about attributes. [First plot](#firstp) is frequency distribution of output attribute, selling price, presented with histogram plot. Following [four](#ffp) + [four](#sfp) plots represent  frequency distributions of categorical attributes and last [four](#fourp) plots represent relationship between selling price, y axis, and continous attribute, x axis.   
+The plots represented in this section give more information about attributes. [First plot](#firstp) is frequency distribution of output attribute, selling price, represented with histogram plot. Following [four](#ffp) + [four](#sfp) plots represent  frequency distributions of categorical attributes and last [four](#fourp) plots shows continous attributes and their relationship with selling price.   
 
-######<a name="firstp"></a> Selling price   
+######<a name="firstp"></a> Frequency distribution of selling price   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)   
+   
+Following eight plots represents frequency distribution over eight categorical attributes. On x axis there are possible values which attribute can take, and y axis shows number of times each value inside that attribute appears.   
+######<a name="ffp"></a>Plots are for the following attriutes: "Condition", "Processor type", "Brand"and "Release year".
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/2 collage.jpg)   
 
-######<a name="ffp"></a> Condition, Processor type, Brand, Release year
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/2 collage.jpg)
-######<a name="sfp"></a> Graphic processing type, Operating system, Type of computer, Return shipping paid by
+######<a name="sfp"></a> Plots are for the following attributes: "Graphic processing type", "Operating system", "Type of computer", "Return shipping paid by".   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/3 collage.jpg)   
 
-######<a name="fourp"></a> Hard drive, RAM, Processor speed, Screen size   
-Linear relationship between selling price and each continous attribute is represented as blue straight line.   
+######<a name="fourp"></a> Hard drive, RAM, Processor speed, Screen size  
+Following plots represent relationship between selling price on y axis, and continous attribute on x axis.
+Linear relationship between selling price and attribute is represented as blue straight line.   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)
    
 ##### Imputing missing values
+One of the problems was missing values. Plot below shows how many missing values each attribute has.
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Missing values.jpg)
 * Categorical attributes: Random sample from existing values of attribute is used to impute missing data.
 * Continuous attributes: Median statistic is used to impute missing data.
    
