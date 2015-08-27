@@ -18,8 +18,8 @@ There are two ways to give the answer:
    
 The aim of this project is to help the user to **name the price** of laptop that he wants to sell. Every laptop has several attributes what influance its value, and accordingly its price.   
 In this project the whole process of determining the optimal price for a product will be shown:
-* Collecting the data
-* Filtering data
+* Collecting and filreting the data
+* Exploratory analysis
 * Applying machine learning techniques for regression problem and evaluation
 
 ###<a name="cd"></a>Collecting the data   
