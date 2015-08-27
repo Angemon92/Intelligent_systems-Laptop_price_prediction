@@ -108,8 +108,9 @@ From the following plots we can see few majorities in data:
    
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/3 collage.jpg)   Picture 5: Distribution of attributes: "Graphic processing type", "Operating system", "Type of computer" and "Return shipping paid by".   
 <a name="fourp"></a>   
-Following plots represent relationship between selling price on y axis, and continous attribute on x axis.
-Linear relationship between selling price and attribute is represented as blue straight line.   
+* Following plots represent relationship between selling price on y axis, and continous attribute on x axis. Intensity of blue represents how many laptops have that values for selling price and other attribute. Darker blue means that more laptops have that combination of values for both attributes.      
+* Linear relationship between selling price and attribute is represented as blue straight line. Can be seen taht for HDD and RAM almost propotionaly incresing GBs increses selling price of laptop. For other two attributes, processor speed and screen size, that is not the case. Incresing GHZ or inches, lightly increses selling price of laptop.
+* We can see that every continous variable has high variance for simmilar selling prices. For example for selling price of near 200 USD, processor speed can go from 1GHZ to 4 GHZ (left-bottom plot). That may be explained by attribute "condition". Mabey some laptop has 4GHZ processor speed, but it is broken and value for condition is "For parts or not working" and that is the reason why its selling price is 200 USD. Then helps different blue scale, and can be seen that usually, for price of 200 USD, processor speed has value of 2 GHZ - 2.5 GHZ (darker blue is at that region).
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)   Picture 6: Selling price and continous attributes (Hard drive, RAM, Processor speed, Screen size ) relationship.   
    
 ##### Imputing missing values
