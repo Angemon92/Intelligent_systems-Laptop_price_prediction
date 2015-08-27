@@ -110,11 +110,11 @@ From the following plots we can see few majorities in data:
 <a name="fourp"></a>   
 * Following plots represent relationship between selling price on y axis, and continous attribute on x axis. Intensity of blue represents how many laptops have that values for selling price and other attribute. The darker the blue is the more laptops have that combination of values for both attributes.      
 * Linear relationship between selling price and attribute is represented as blue straight line. Can be seen that for HDD and RAM almost propotionaly incresing GBs increses selling price of laptop. For other two attributes, processor speed and screen size, that is not the case. Incresing GHZ or inches, slightly increses selling price of laptop.
-* We can see that every continous variable has high variance for simmilar selling prices. For example for selling price of near 200 USD, processor speed can go from 1GHZ to 4 GHZ (left-bottom plot). That may be explained by attribute "condition". Mabey some laptop has 4GHZ processor speed, but it is broken and value for condition is "For parts or not working" and that is the reason why its selling price is 200 USD. Then helps different blue scale, and can be seen that usually, for price of 200 USD, processor speed has value of 2 GHZ - 2.5 GHZ (darker blue is at that region).
+* <a name="expl"></a>We can see that every continous variable has high variance for simmilar selling prices. For example for selling price of near 200 USD, processor speed can go from 1GHZ to 4 GHZ (left-bottom plot). That may be explained by attribute "condition". Mabey some laptop has 4GHZ processor speed, but it is broken and value for condition is "For parts or not working" and that is the reason why its selling price is 200 USD. Then helps different blue scale, and can be seen that usually, for price of 200 USD, processor speed has value of 2 GHZ - 2.5 GHZ (darker blue is at that region).
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)   Picture 6: Selling price and continous attributes (Hard drive, RAM, Processor speed, Screen size ) relationship.   
    
 ##### Imputing missing values
-One of the problems was missing values. Plot below shows how many missing values each attribute has. Specilay this is problem in release year attribute where more then 85% of values are missing.
+One of the problems was missing values. Plot below shows how many missing values each attribute has. Specilay this is problem in release year attribute where near 85% of values are missing.
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Missing values.png)   Price 7: Missing values distribution.   
    
 Problem is solved for:
@@ -132,6 +132,8 @@ Dataset contains 32550 laptops.
    
 Whole flow, models and values of evaluation metrics can be seen in a picture below.   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Orange workflow.png)   Picture 8: Orange program and working flow.   
+   
+We can see that all three models are simillar based on RMSE and MAE. Suggestion is to use third model, linear regression with L1 regularization, because L1 will do implicitly dimensionality reduction, and the number of attributes that will influance on selling price in future predictions will be smaller. With L1 we are trying to solve problem that there are high variance of similar selling price and other continous attribute (this is explained [here](#expl)). Fact is that learning regression tree is near 10 times slower then learning linear regression, but that is not the case in prediction process.
    
 ##<a name="ack"></a>Acknowledgements
 The project was developed as part of the project assignment for the course <a href="http://is.fon.rs">Intelligent Systems</a> at the <a href="http://fon.rs">Faculty of Organizational Sciences</a>, University of Belgrade, Serbia.
