@@ -26,11 +26,14 @@ In this project the whole process of determining the optimal price for a product
 The application developed for collecting data from eBay consist of two components:   
 1. The role of the first component is to collect data from EBay. Main graphical form [*CollectingDataForm*] creates new thread [*CollectingDataThread*] that every 12h calls EBay's API [*URLCreator*] two times. First time it collects 10000 laptop IDs, and second time calls API to extract all available data (attributes) for each laptop based on laptops ID. API is returning data in XML format [*XMLHandler*] and all collected data are stored [*IOManager*] in Database folder in serialized format. Name of the files where data is serialized is generated using date of creation [*DateManager*].
 2. The second component [*Main*] is programmed to do core cleaning of collected data. First it deserilize [*IOManager*] localy stored data. Core cleaning is based on regular expressions. (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [Cleaning rules can be found in Laptop class, inside setter methods]   
-Class diagram of application can be seen in picture below.
+Class diagram of application can be seen in picture below.   
+   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)   Picture 2: Class diagram of application.     
    
 Only important attributes and methods of classes are shown. Laptop class is domain class and it is used by most of the classes in project.  
 *Application is written in JAVA, using NetBeans IDE. Application is using DOM4J library for manipulation with XML.*
+   
+Date of collecting data: April, 2015.
    
 Following attributes are exluded from the data collection process because small number of laptops has them (roughly 1 in 100 laptops has these attributes): "Wireless", "Warranty", "Graphic card configuration", "Weight", "Item must be returned within", "Refund will be given as", "Processor configuration".     
 Attribute "Model" is also excluded because it has high variance. (example: Model e {40A10090US, Latitude E6420, ZV5000, E6400, D620, D630, Mini 10, ...}   
@@ -80,17 +83,25 @@ The attributes selected for building a prediction model are given below.
 | --------- |:--------:|:--------:|:--------:|:--------:|:--------:|
 | 20.050    | 79.990   | 169.200  | 259.100  | 340.000  | 2000.000 |   
 All constraints for continous attributes are defined subjectivly by human in process of exploring the data. Laptops with attributes that do not satisfy any of constraints are removed from dataset. Near 4000 laptops are removed.   
-<a name="ea"></a>##Exploratory analysis   
-The plots represented in this section give more information about attributes. [First plot](#firstp) is frequency distribution of output attribute, selling price, represented with histogram plot. Following [four](#ffp) + [four](#sfp) plots represent  frequency distributions of categorical attributes and last [four](#fourp) plots shows continous attributes and their relationship with selling price.   
+
+##<a name="ea"></a>Exploratory analysis   
+The plots represented in this section give more information about attributes. First plot [(Picture 3)](#firstp) is frequency distribution of output attribute, selling price, represented with histogram plot. Following four [Picture 4](#ffp) + four [Picture 5](#sfp) plots represent  frequency distributions of categorical attributes and last [four](#fourp) plots shows continous attributes and their relationship with selling price.   
 
 ######<a name="firstp"></a> Frequency distribution of selling price   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)   Picture 3: Frequency distribution of selling price   
    
 Following eight plots represents frequency distribution over eight categorical attributes. On x axis there are possible values which attribute can take, and y axis shows number of times each value inside that attribute appears.   
-######<a name="ffp"></a>Plots are for the following attriutes: "Condition", "Processor type", "Brand" and "Release year".
+From the following plots we can see few majorities in data:
+* Most laptops on eBay are selling as used which is expected. 
+* There is big majority, Intel, insite processor type attribue.
+* Four most selling brands are: Dell, HP, Lenovo and Toshiba.
+* Right-bottom plot tells us that there are more *newer* laptops, which is also usual. Interesting is that we can be expect that till end of 2015, there will be most selling laptops released in 2015, because date of collecting data is April, 2015.   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/2 collage.jpg)   Picture 4: Distribution of attributes: "Condition", "Processor type", "Brand" and "Release year".
 
-######<a name="sfp"></a> Plots are for the following attributes: "Graphic processing type", "Operating system", "Type of computer" and "Return shipping paid by".   
+*  Majority of integrated graphical processing type
+*  Windows 7 is most included operating system in laptops.
+*  Interesting that near 80% of laptops, computer machines, are notebooks.
+*  In case of return, shipping will be usually paid by buyer.
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/3 collage.jpg)   Picture 5: Distribution of attributes: "Graphic processing type", "Operating system", "Type of computer" and "Return shipping paid by".   
    
 ######<a name="fourp"></a> Hard drive, RAM, Processor speed, Screen size  
