@@ -14,7 +14,7 @@ There are two ways to give the answer:
 1.Surf the internet, looking for prices of laptops with similar characteristics (attributes in the following text) as your own.   
 2.Use machine learning to get optimal, **best price** (neither too expensive nor cheap), based on data about nearly 40000 laptops collected from EBay's API.
    
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Problem explanation.jpg)   <div class="align-center">Picture 1: Two ways to found out best price for selling laptop.</div>   
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Problem explanation.jpg)   <div class="align-justify">Picture 1: Two ways to found out best price for selling laptop.</div>   
 The aim of this project is to help the user to **name the price** of laptop that he wants to sell. Every laptop has several attributes what influance its value, and accordingly its price.   
 In this project the whole process of determining the optimal price for a product will be shown:
 * Collecting the data
@@ -26,7 +26,7 @@ The application developed for collecting data from eBay consist of two component
 1. The role of the first component is to collect data from EBay. Main graphical form [*CollectingDataForm*] creates new thread [*CollectingDataThread*] that every 12h calls EBay's API two times. First time it collects 10000 laptop IDs, and second time calls API to extract all available data (attributes) for each laptop based on laptops ID.   
 2. The second piece [*Main*] is programmed to do core cleaning of collected data. Core cleaning is based on regular expressions. (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [Cleaning rules can be found in Laptop class, inside setter methods]   
 Class diagram of application can be seen in picture below.
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)   <div class="align-center">Picture2: Class diagram of application.</div>   
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)   <div class="align-justify">Picture2: Class diagram of application.</div>   
 Only important attributes and methods of classes are shown. Laptop class is domain class and it is used by most of the classes in project.  
 *Application is written in JAVA, using NetBeans IDE.*   
 *Application is using DOM4J library for manipulation with XML.*
