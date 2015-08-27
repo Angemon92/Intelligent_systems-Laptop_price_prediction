@@ -81,9 +81,9 @@ The attributes selected for building a prediction model are given below.
 | 20.050    | 79.990   | 169.200  | 259.100  | 340.000  | 2000.000 |   
 All constraints for continous attributes are defined subjectivly by human in process of exploring the data. Laptops with attributes that do not satisfy any of constraints are removed from dataset. Near 4000 laptops are removed.   
 # Exploratory analysis   
-There will be shown plots that give more information about attributes. First plot is frequency distribution of output attribute, selling price, presented with histogram plot. Next 8 plots represent  frequency distributions of categorical attributes and last 4 plots represent relationship between selling price, y axis, and continous attribute, x axis.   
+The plots presented in this section give more information about attributes. [First plot](#fp) is frequency distribution of output attribute, selling price, presented with histogram plot. Next 8 plots represent  frequency distributions of categorical attributes and last 4 plots represent relationship between selling price, y axis, and continous attribute, x axis.   
 ###### Selling price   
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)
+<a name="fp"></a> ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)
    
 ###### Condition, Processor type, Brand, Release year
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/2 collage.jpg)
@@ -99,16 +99,17 @@ Linear relationship between selling price and each continous attribute is repres
 * Continuous attributes: Median statistic is used to impute missing data.
    
 ###<a name="ml"></a>Applying machine learning techniques for regression problem and evaluation   
-Python open source program "Orange Data Mining" is used to perform process of building and learning machine learning  models (Orange/EBay Orange workflow.ows contains flow that can be imported in Orange program to perform predictions). Models that are learned and evalueted are:   
+Python open source program "Orange Data Mining" is used to perform process of building and learning machine learning  models (in folder OrangeWorkflow, file EBay_workflow.ows can be imported in Orange program to perform predictions). Models that are learned and evalueted are:   
 * Linear regression with L1 regularization (lambda=0.3)
 * Linear regression with L2 regularization (lambda=0.3)
 * CART - Classification And Regression Tree
    
 Evaluation metrics are: Root Mean Square Error and Mean Apsolute Error.
+Dataset contains 32550 laptops.
    
 Whole flow, models and values of evaluation metrics can be seen in a picture below.   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Orange workflow.png)
-*Evaluation is performed using Cross validation with 5 folds*
+*Evaluation is performed using Cross validation with 5 folds.*
    
 ##<a name="ack"></a>Acknowledgements
 The project was developed as part of the project assignment for the course <a href="http://is.fon.rs">Intelligent Systems</a> at the <a href="http://fon.rs">Faculty of Organizational Sciences</a>, University of Belgrade, Serbia.
