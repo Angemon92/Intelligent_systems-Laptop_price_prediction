@@ -14,7 +14,7 @@ There are two ways to give the answer:
 1.Surf the internet, looking for prices of laptops with similar characteristics (attributes in the following text) as your own.   
 2.Use machine learning to get optimal, **best price** (neither too expensive nor cheap), based on data about nearly 40000 laptops collected from EBay's API.
    
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Problem explanation.jpg)   <div class="align-justify">Picture 1: Two ways to found out best price for selling laptop.</div>   
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Problem explanation.jpg)   Picture 1: Two ways to found out best price for selling laptop.   
 The aim of this project is to help the user to **name the price** of laptop that he wants to sell. Every laptop has several attributes what influance its value, and accordingly its price.   
 In this project the whole process of determining the optimal price for a product will be shown:
 * Collecting the data
@@ -23,35 +23,31 @@ In this project the whole process of determining the optimal price for a product
 
 ###<a name="cd"></a>Collecting the data   
 The application developed for collecting data from eBay consist of two components:   
-1. The role of the first component is to collect data from EBay. Main graphical form [*CollectingDataForm*] creates new thread [*CollectingDataThread*] that every 12h calls EBay's API two times. First time it collects 10000 laptop IDs, and second time calls API to extract all available data (attributes) for each laptop based on laptops ID.   
-2. The second piece [*Main*] is programmed to do core cleaning of collected data. Core cleaning is based on regular expressions. (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [Cleaning rules can be found in Laptop class, inside setter methods]   
+1. The role of the first component is to collect data from EBay. Main graphical form [*CollectingDataForm*] creates new thread [*CollectingDataThread*] that every 12h calls EBay's API [*URLCreator*] two times. First time it collects 10000 laptop IDs, and second time calls API to extract all available data (attributes) for each laptop based on laptops ID. API is returning data in XML format [*XMLHandler*] and all collected data are stored [*IOManager*] in Database folder in serialized format. Name of the files where data is serialized is generated using date of creation [*DateManager*].
+2. The second component [*Main*] is programmed to do core cleaning of collected data. First it deserilize[*IOManager*] localy stored data. Core cleaning is based on regular expressions. (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [Cleaning rules can be found in Laptop class, inside setter methods]   
 Class diagram of application can be seen in picture below.
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)   <div class="align-justify">Picture2: Class diagram of application.</div>   
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)   Picture2: Class diagram of application.     
 Only important attributes and methods of classes are shown. Laptop class is domain class and it is used by most of the classes in project.  
 *Application is written in JAVA, using NetBeans IDE.*   
 *Application is using DOM4J library for manipulation with XML.*
    
-##### Selected  and excluded attributes
-Following attributes are exluded from collecting process because small number of laptops has them (every 100th laptop has these attrributes): Wireless, Warranty, Graphic card configuration, Weight, Item must be returned within, Refund will be given as, Processor configuration.     
+Following attributes are exluded from the data collection process because small number of laptops has them (roughly 1 in 100 laptops has these attributes): Wireless, Warranty, Graphic card configuration, Weight, Item must be returned within, Refund will be given as, Processor configuration.     
 Attribute "Model" is also excluded because it has high variance. (example: Model e {40A10090US, Latitude E6420, ZV5000, E6400, D620, D630, Mini 10, ...}   
-Final collection of attributes contains: [Attribute list](#al)
-
-###<a name="fdea"></a>Filtering data and exploratory analysis
-    
-####<a name="al"></a>Attributes explanation and constraints:     
-######Categorical:   
+The attributes selected for building a prediction model are given below.
+   
+##Categorical attributes:   
 * `"sellingCurrency"`: Selling price currency of laptop {"AUD", "CAD", "EUR", "GBP", "USD"}. *All laptops are filtered to USD currency and then attribute is excluded from dataset.* 
 * `"shippingCurrency"`: Shipping price currency of laptop {"AUD", "CAD", "EUR", "GBP", "USD"}. *All laptops are filtered to USD currency and then attribute is excluded from dataset.*
 * `"returnShippingPaidBy"`: In case of return, shipping will be paid by {"Buyer", "Seller"}.
 * `"type"`: Type of laptop {"Laptop", "Netbook", "Notebook", "Portable", "Ultrabook"}.
 * `"brand"`: Brand of laptop {"Acer", "Asus", "Compaq", "Dell", "Emachines", "Fujitsu", "Gateway", "HP", "IBM", "Lenovo", "Panasonic", "Samsung", "Sony", "Toshiba"}.
 * `"operatingSystem"`: Operating system of laptop {"Chrome OS", "Not included", "Windows 2000", "Windows 7", "Windows 8", "Windows Vista", "Windows XP"}.
-* `"processorType"`: Type of CPU {"AMD", "ATOM", "INTEL"}.*INTEL could be separeted in {i3, i5, i7} but then less the 0.1% of laptops have some of these 3 values.*
+* `"processorType"`: Type of CPU {"AMD", "ATOM", "INTEL"}.*INTEL could be separeted in {i3, i5, i7} but then less the 0.1% of laptops have some of these 3 values so the idea is rejected.*
 * `"releaseYear"`: Release year of laptop {2000, ... , 2015}.*There was several laptops with value of 2016 in this attribute, but they are excluded from dataset.*
 * `"graphicProcessingType"`: Type of GPU {"Dedicated", "Hybrid", "Integrated"}.
 * `"condition"`: Condition of laptop {"Brand New", "New", "New other (see details)", "Like New", "For parts or not working", "Manufacturer refurbished", "Seller refurbished", "Used"}.*Reduction is used on {"Brand New", "New", "New other (see details)", "Like New"}. All 4 are united in one "New" value.*  
 
-######Continuous:   
+##Continuous attributes:   
 * `~~"itemID"~~`: Unique value for each laptop. *Used only in collecting and filtering manipulataion. Attribut is removed after all attributes are filtered.*
 * `"shippingPrice"`: Shipping price in USD.  
    
@@ -83,8 +79,8 @@ Final collection of attributes contains: [Attribute list](#al)
 |   Min.    | 1st Qu.  |  Median  |   Mean   | 3rd Qu.  |   Max.   |
 | --------- |:--------:|:--------:|:--------:|:--------:|:--------:|
 | 20.050    | 79.990   | 169.200  | 259.100  | 340.000  | 2000.000 |   
-Laptops which attributes does not satisfy any of constraints are removed from dataset. Near 4000 laptops are removed.   
-#### Exploratory analysis   
+All constraints for continous attributes are defined subjectivly by human in process of exploring the data. Laptops with attributes that do not satisfy any of constraints are removed from dataset. Near 4000 laptops are removed.   
+# Exploratory analysis   
 There will be shown plots that give more information about attributes. First plot is frequency distribution of output attribute, selling price, presented with histogram plot. Next 8 plots represent  frequency distributions of categorical attributes and last 4 plots represent relationship between selling price, y axis, and continous attribute, x axis.   
 ###### Selling price   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)
