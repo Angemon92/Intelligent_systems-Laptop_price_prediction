@@ -31,13 +31,13 @@ Only important attributes and methods of classes are shown. Laptop class is doma
 *Application is written in JAVA, using NetBeans IDE.*   
 *Application is using DOM4J library for manipulation with XML.*
    
-Following attributes are exluded from the data collection process because small number of laptops has them (roughly 1 in 100 laptops has these attributes): Wireless, Warranty, Graphic card configuration, Weight, Item must be returned within, Refund will be given as, Processor configuration.     
+Following attributes are exluded from the data collection process because small number of laptops has them (roughly 1 in 100 laptops has these attributes): "Wireless", "Warranty", "Graphic card configuration", "Weight", "Item must be returned within", "Refund will be given as", "Processor configuration".     
 Attribute "Model" is also excluded because it has high variance. (example: Model e {40A10090US, Latitude E6420, ZV5000, E6400, D620, D630, Mini 10, ...}   
+Attributes "sellingCurrency" and "shippingCurrency" taking values {"AUD", "CAD", "EUR", "GBP", "USD"} are also excluded because all selling price and shipping price are transformed in USD.   
+Attribute laptopID, unique value for each laptop, is used only in collecting and filtering data manipulataion. Attribut is removed after all maniputalion is done.   
 The attributes selected for building a prediction model are given below.
    
-##Categorical attributes:   
-* `"sellingCurrency"`: Selling price currency of laptop {"AUD", "CAD", "EUR", "GBP", "USD"}. *All laptops are filtered to USD currency and then attribute is excluded from dataset.* 
-* `"shippingCurrency"`: Shipping price currency of laptop {"AUD", "CAD", "EUR", "GBP", "USD"}. *All laptops are filtered to USD currency and then attribute is excluded from dataset.*
+###Categorical attributes:   
 * `"returnShippingPaidBy"`: In case of return, shipping will be paid by {"Buyer", "Seller"}.
 * `"type"`: Type of laptop {"Laptop", "Netbook", "Notebook", "Portable", "Ultrabook"}.
 * `"brand"`: Brand of laptop {"Acer", "Asus", "Compaq", "Dell", "Emachines", "Fujitsu", "Gateway", "HP", "IBM", "Lenovo", "Panasonic", "Samsung", "Sony", "Toshiba"}.
@@ -47,8 +47,7 @@ The attributes selected for building a prediction model are given below.
 * `"graphicProcessingType"`: Type of GPU {"Dedicated", "Hybrid", "Integrated"}.
 * `"condition"`: Condition of laptop {"Brand New", "New", "New other (see details)", "Like New", "For parts or not working", "Manufacturer refurbished", "Seller refurbished", "Used"}.*Reduction is used on {"Brand New", "New", "New other (see details)", "Like New"}. All 4 are united in one "New" value.*  
 
-##Continuous attributes:   
-* `~~"itemID"~~`: Unique value for each laptop. *Used only in collecting and filtering manipulataion. Attribut is removed after all attributes are filtered.*
+###Continuous attributes:   
 * `"shippingPrice"`: Shipping price in USD.  
    
 |   Min.    | 1st Qu.  |  Median  |   Mean   | 3rd Qu.  |   Max.   |
