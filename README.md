@@ -85,7 +85,7 @@ The attributes selected for building a prediction model are given below.
 All constraints for continous attributes are defined subjectivly by human in process of exploring the data. Laptops with attributes that do not satisfy any of constraints are removed from dataset. Near 4000 laptops are removed.   
 
 ##<a name="ea"></a>Exploratory analysis   
-The plots represented in this section give more information about attributes. First plot [(Picture 3)](#firstp) is frequency distribution of output attribute, selling price, represented with histogram plot. Following four [Picture 4](#ffp) + four [Picture 5](#sfp) plots represent  frequency distributions of categorical attributes and last [four](#fourp) plots shows continous attributes and their relationship with selling price.   
+The plots represented in this section give more information about attributes. First plot [(Picture 3)](#firstp) is frequency distribution of output attribute, selling price, represented with histogram plot. Following four ([Picture 4](#ffp)) plus four ([Picture 5](#sfp)) plots represent  frequency distributions of categorical attributes and last four ([Picture 6](#fourp)) plots shows continous attributes and their relationship with selling price.   
 
 ######<a name="firstp"></a> Frequency distribution of selling price   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)   Picture 3: Frequency distribution of selling price   
