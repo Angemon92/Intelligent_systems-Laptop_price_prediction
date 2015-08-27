@@ -9,25 +9,26 @@ Report content:
    
 ##<a name="atp"></a>About the project
 Everytime we want to sell something, following question appears: `What is the good price for my selling item ?`
+In this project, selling item will be computer machine (laptop in following text). 
 There are two ways to give the answer:   
 1.Surf the internet, looking for prices of laptops with similar characteristics (attributes in the following text) as your own.   
-2.Use machine learning to get optimal, **best price** (not too expensive neither cheap), based on near 40000 laptops collected from EBay's API.
+2.Use machine learning to get optimal, **best price** (neither too expensive nor cheap), based on data about nearly 40000 laptops collected from EBay's API.
    
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Problem explanation.jpg)   
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Problem explanation.jpg)   ->Picture 1: Two ways to found out best price for selling laptop.<-   
 
-The aim of this project is to help the user to **name the price** of laptop that he wants to sell. Every laptop has several attributes from which its value depends. 
-In this project the whole process will be shown:
+The aim of this project is to help the user to **name the price** of laptop that he wants to sell. Every laptop has several attributes what influance its value, and accordingly its price.   
+In this project the whole process of determining the optimal price for a product will be shown:
 * Collecting the data
 * Filtering data
 * Applying machine learning techniques for regression problem and evaluation
 
 ###<a name="cd"></a>Collecting the data   
-Application is developed for collecting data and contains two "pieces":   
-1. The first piece's role is to collect data from EBay. Main graphical form [*CollectingDataForm*] creates new thread [*CollectingDataThread*] that every 12h calls EBay's API two times. First time it collects 10000 laptop IDs, and second time calls API to extract all available data (attributes) for each laptop based on laptops ID.   
-2. The second piece [*Main*] is programmed to do core cleaning of collected data. Core cleaning is based on regular expressions. (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [cleaning rules can be found in Laptop class, inside setter methods]   
-Conceptual Class diagram of application can be seen in picture below.
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)
-`Only important attributes and methods of classes are shown. Laptop class is domain class and it is used by most of the classes in project.`   
+The application developed for collecting data from eBay consist of two components:   
+1. The role of the first component is to collect data from EBay. Main graphical form [*CollectingDataForm*] creates new thread [*CollectingDataThread*] that every 12h calls EBay's API two times. First time it collects 10000 laptop IDs, and second time calls API to extract all available data (attributes) for each laptop based on laptops ID.   
+2. The second piece [*Main*] is programmed to do core cleaning of collected data. Core cleaning is based on regular expressions. (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [Cleaning rules can be found in Laptop class, inside setter methods]   
+Class diagram of application can be seen in picture below.
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)   ->Picture 2: Class diagram of application.<-
+Only important attributes and methods of classes are shown. Laptop class is domain class and it is used by most of the classes in project.  
 *Application is written in JAVA, using NetBeans IDE.*   
 *Application is using DOM4J library for manipulation with XML.*
    
