@@ -35,8 +35,8 @@ Following attributes are exluded from the data collection process because small 
 Attribute "Model" is also excluded because it has high variance. (example: Model e {40A10090US, Latitude E6420, ZV5000, E6400, D620, D630, Mini 10, ...}   
 Attributes "sellingCurrency" and "shippingCurrency" taking values {"AUD", "CAD", "EUR", "GBP", "USD"} are also excluded because all selling price and shipping price are transformed in USD.   
 Attribute laptopID, unique value for each laptop, is used only in collecting and filtering data manipulataion. Attribut is removed after all maniputalion is done.   
-The attributes selected for building a prediction model are given below.
-   
+The attributes selected for building a prediction model are given below.   
+
 ###Categorical attributes:   
 * `"returnShippingPaidBy"`: In case of return, shipping will be paid by {"Buyer", "Seller"}.
 * `"type"`: Type of laptop {"Laptop", "Netbook", "Notebook", "Portable", "Ultrabook"}.
@@ -80,8 +80,9 @@ The attributes selected for building a prediction model are given below.
 | 20.050    | 79.990   | 169.200  | 259.100  | 340.000  | 2000.000 |   
 All constraints for continous attributes are defined subjectivly by human in process of exploring the data. Laptops with attributes that do not satisfy any of constraints are removed from dataset. Near 4000 laptops are removed.   
 <a name="ea"></a>##Exploratory analysis   
-The plots presented in this section give more information about attributes. [First plot](#firstp) is frequency distribution of output attribute, selling price, presented with histogram plot. Following [4](#ffp) + [4](#sfp) plots represent  frequency distributions of categorical attributes and last [four](#fourp) plots represent relationship between selling price, y axis, and continous attribute, x axis.   
-<a name="firstp"></a>###### Selling price   
+The plots presented in this section give more information about attributes. [First plot](#firstp) is frequency distribution of output attribute, selling price, presented with histogram plot. Following [four](#ffp) + [four](#sfp) plots represent  frequency distributions of categorical attributes and last [four](#fourp) plots represent relationship between selling price, y axis, and continous attribute, x axis.   
+
+<a name="firstp"></a>######Selling price   
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)
    
 <a name="ffp"></a>###### Condition, Processor type, Brand, Release year
