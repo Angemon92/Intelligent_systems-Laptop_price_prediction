@@ -91,25 +91,26 @@ The plots represented in this section give more information about attributes. Fi
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/1 SellingPrice DIstibution.jpg)   Picture 3: Frequency distribution of selling price   
    
 Following eight plots represents frequency distribution over eight categorical attributes. On x axis there are possible values which attribute can take, and y axis shows number of times each value inside that attribute appears.   
-From the following plots we can see few majorities in data:   
+From the following plots we can see few majorities in data:
+<a name="ffp"></a>   
 * Most laptops on eBay are selling as used which is expected.
 * There is big majority, Intel, insite processor type attribue.
 * Four most selling brands are: Dell, HP, Lenovo and Toshiba.
 * Right-bottom plot tells us that there are more *newer* laptops, which is also usual. Interesting is that we can be expect that till end of 2015, there will be most selling laptops released in 2015, because date of collecting data is April, 2015.   
    
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/2 collage.jpg)   Picture 4: Distribution of attributes: "Condition", "Processor type", "Brand" and "Release year".
-
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/2 collage.jpg)   Picture 4: Distribution of attributes: "Condition", "Processor type", "Brand" and "Release year". 
+   
+<a name="sfp"></a>   
 *  Majority of integrated graphical processing type.
 *  Windows 7 is most included operating system in laptops.
-*  Interesting that near 80% of laptops, computer machines, are notebooks.
+*  Interesting that near 70% of laptops, computer machines, are notebooks.
 *  In case of return, shipping will be usually paid by buyer.
    
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/3 collage.jpg)   Picture 5: Distribution of attributes: "Graphic processing type", "Operating system", "Type of computer" and "Return shipping paid by".   
-   
-######<a name="fourp"></a> Hard drive, RAM, Processor speed, Screen size  
+<a name="fourp"></a>   
 Following plots represent relationship between selling price on y axis, and continous attribute on x axis.
 Linear relationship between selling price and attribute is represented as blue straight line.   
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)   Picture 6: Selling price and continous attribute relationship.   
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/4 collage.jpg)   Picture 6: Selling price and continous attributes (Hard drive, RAM, Processor speed, Screen size ) relationship.   
    
 ##### Imputing missing values
 One of the problems was missing values. Plot below shows how many missing values each attribute has.
