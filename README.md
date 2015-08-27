@@ -1,4 +1,4 @@
-# Inetelligent_systems-Laptop_price_prediction
+# Inetelligent systems-Laptop price suggestion
 Report content:   
 [About the project](#atp)   
 [Collecting the data](#cd)   
@@ -99,7 +99,7 @@ Linear relationship between selling price and attribute is represented as blue s
    
 ##### Imputing missing values
 One of the problems was missing values. Plot below shows how many missing values each attribute has.
-![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Missing values.jpg)
+![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/Missing values.png)
 * Categorical attributes: Random sample from existing values of attribute is used to impute missing data.
 * Continuous attributes: Median statistic is used to impute missing data.
    
