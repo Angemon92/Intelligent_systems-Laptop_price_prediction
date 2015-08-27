@@ -25,7 +25,7 @@ In this project the whole process of determining the optimal price for a product
 ###<a name="cd"></a>Collecting the data   
 The application developed for collecting data from eBay consist of two components:   
 1. The role of the first component is to collect data from EBay. Main graphical form [*CollectingDataForm*] creates new thread [*CollectingDataThread*] that every 12h calls EBay's API [*URLCreator*] two times. First time it collects 10000 laptop IDs, and second time calls API to extract all available data (attributes) for each laptop based on laptops ID. API is returning data in XML format [*XMLHandler*] and all collected data are stored [*IOManager*] in Database folder in serialized format. Name of the files where data is serialized is generated using date of creation [*DateManager*].
-2. The second component [*Main*] is programmed to do core cleaning of collected data. First it deserilize [*IOManager*] localy stored data. Core cleaning is based on regular expressions. (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [Cleaning rules can be found in Laptop class, inside setter methods]   
+2. The second component [*Main*] is programmed to do core cleaning of collected data. First it deserilize [*IOManager*] localy stored data. Core cleaning is based on regular expressions. (ex: All brand names to upper case, MB to GB for RAM, MHZ to GHZ for processor speed, ...). [Cleaning rules can be found in Laptop class, inside its setter methods]   
 Class diagram of application can be seen in picture below.   
    
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)   Picture 2: Class diagram of application.     
@@ -94,7 +94,7 @@ Following eight plots represents frequency distribution over eight categorical a
 From the following plots we can see few majorities in data:
 <a name="ffp"></a>   
 * Most laptops on eBay are selling as used which is expected.
-* There is big majority, Intel, insite processor type attribue.
+* There is big majority, Intel, inside processor type attribue.
 * Four most selling brands are: Dell, HP, Lenovo and Toshiba.
 * Right-bottom plot tells us that there are more *newer* laptops, which is also usual. Interesting is that we can be expect that till end of 2015, there will be most selling laptops released in 2015, because date of collecting data is April, 2015.   
    
