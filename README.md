@@ -31,13 +31,13 @@ Class diagram of the application can be seen in the picture below.
    
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)   Figure 2: Class diagram of application.     
    
-Only important attributes and methods of classes are shown. The laptop class is a domain class and it is used by most of the classes in project.  
+Only important attributes and methods of classes are shown. The Laptop class is a domain class and it is used by most of the classes in project, which is not shown in plot because of clearer view of application structure.  
 *Application is written in JAVA, using NetBeans IDE. Application is using DOM4J library for manipulation with XML.*
    
 #<a name="dcas"></a> Data cleaning and attribute selection
 Date of collecting data: April, 2015.
    
-The ollowing attributes are exluded from the data collection process because small number of laptops has them (roughly 1 in 100 laptops has these attributes): "Wireless", "Warranty", "Graphic card configuration", "Weight", "Item must be returned within", "Refund will be given as", "Processor configuration".     
+The following attributes are exluded from the data collection process because small number of laptops has them (roughly 1 in 100 laptops has these attributes): "Wireless", "Warranty", "Graphic card configuration", "Weight", "Item must be returned within", "Refund will be given as", "Processor configuration".     
 Attribute "Model" is also excluded because it has high variance. (In particular, possible values of this attribute include  {40A10090US, Latitude E6420, ZV5000, E6400, D620, D630, Mini 10, ...}   
 Attributes "sellingCurrency" and "shippingCurrency" taking values {"AUD", "CAD", "EUR", "GBP", "USD"} are also excluded because all selling prices and shipping prices are transformed in USD.   
 Attribute laptopID, unique value for each laptop, is used only in collecting and filtering data. The attribut is removed after all the data pre-processing is done.   
