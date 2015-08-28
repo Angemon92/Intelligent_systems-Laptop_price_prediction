@@ -31,7 +31,7 @@ Class diagram of the application can be seen in the picture below.
    
 ![alt tag](https://raw.github.com/Angemon92/Inetelligent_systems-Laptop_price_prediction/master/Pictures/EBay laptops.png)   Figure 2: Class diagram of application.     
    
-Only important attributes and methods of classes are shown. The Laptop class is a domain class and it is used by most of the classes in project, which is not shown in plot because of clearer view of application structure.  
+Only important attributes and methods of classes are shown. The Laptop class is a domain class and it is used by most of the classes in project, which is not shown in figure because of clearer view of application structure.  
 *Application is written in JAVA, using NetBeans IDE. Application is using DOM4J library for manipulation with XML.*
    
 #<a name="dcas"></a> Data cleaning and attribute selection
